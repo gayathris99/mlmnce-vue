@@ -1,5 +1,6 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout>
+    <the-header/>
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -7,4 +8,12 @@
 </template>
 
 <script>
+import TheHeader from 'src/components/TheHeader.vue'
+
+export default {
+  name: 'MainLayout',
+  components: {
+    TheHeader
+  }
+}
 </script>
