@@ -1,5 +1,5 @@
 <template>
-<div class="header-component">
+<div >
   <div class="row items-center align-center no-wrap q-pa-md" :class="isDesktop ? '' : 'justify-start'">
     <div class="row-items row  items-center no-wrap col-md-9 col-sm-8">
       <div v-if="isMobile">
@@ -37,7 +37,7 @@
   <marquee behavior="smooth" direction="" bgcolor="#ffcdd2" class="q-pa-sm">
      M.L Manjaiah Setty Narasimha Setty College of Education
   </marquee>
-  <div class="row items-center align-center justify-evenly fw-600 menu no-wrap" v-if="!isMobile">
+  <div class="row items-center align-center justify-evenly fw-600 menu no-wrap header-component" v-if="!isMobile">
     <div class="cursor-pointer nav-item">HOME</div>
     <div class="cursor-pointer nav-item">ABOUT US</div>
     <div class="cursor-pointer nav-item">ACADEMIA</div>

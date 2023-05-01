@@ -1,10 +1,14 @@
 <template>
-<div></div>
+  <hero-section/>
 </template>
 
 
 <script>
+import HeroSection from 'src/components/HeroSection.vue'
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  components: {
+    HeroSection
+  }
 }
 </script>
