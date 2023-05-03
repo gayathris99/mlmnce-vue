@@ -11,7 +11,8 @@ const routes = [
     path: '/about',
     component: () => import('layouts/AboutLayout.vue'),
     children: [
-      { path: '', component: () => import('pages/AboutUs/AboutMLMNCE.vue') }
+      { path: '', component: () => import('pages/AboutUs/AboutMLMNCE.vue') },
+      { path: 'management', component: () => import('src/pages/AboutUs/AboutManagement.vue') }
     ]
   },
 
