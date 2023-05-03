@@ -40,7 +40,7 @@
   <div class="row items-center align-center justify-evenly fw-600 menu no-wrap header-component" v-if="!isMobile">
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'home'})" :class="this.$route.name === 'home' ? 'bordered-class' : ''">HOME</div>
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'about'})" :class="this.$route.fullPath.includes('about') ? 'bordered-class' : ''">ABOUT US</div>
-    <div class="cursor-pointer nav-item">ACADEMIA</div>
+    <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'library'})" :class="this.$route.fullPath.includes('academia') ? 'bordered-class' : ''">ACADEMIA</div>
     <div class="cursor-pointer nav-item">NAAC</div>
     <div class="cursor-pointer nav-item">NCTE</div>
     <div class="cursor-pointer nav-item">ACTIVITIES</div>
@@ -84,12 +84,12 @@
       group="somegroup"
       dense
       >
-        <div class="q-py-sm cursor-pointer fs-12">Library</div>
-        <div class="q-py-sm cursor-pointer fs-12">Affiliation Order</div>
-        <div class="q-py-sm cursor-pointer fs-12">Student Community</div>
-        <div class="q-py-sm cursor-pointer fs-12">Admissions</div>
-        <div class="q-py-sm cursor-pointer fs-12">Course Structure</div>
-        <div class="q-py-sm cursor-pointer fs-12">Syllabus</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('library')">Library</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('affiliation-order')">Affiliation Order</div>
+        <div class="q-py-sm cursor-pointer fs-12 " @click="goTo('student-community')">Student Community</div>
+        <!-- <div class="q-py-sm cursor-pointer fs-12" @click="goTo('admissions')">Admissions</div> -->
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('course-structure')">Course Structure</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('syllabus')">Syllabus</div>
       </q-expansion-item>
     </div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">
