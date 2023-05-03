@@ -1,13 +1,13 @@
 <template>
 <div >
   <div class="row items-center align-center no-wrap q-pa-md" :class="isDesktop ? '' : 'justify-start'">
-    <div class="row-items row  items-center no-wrap col-md-9 col-sm-8">
+    <div class="row-items row  items-center no-wrap col-md-9 col-sm-8 cursor-pointer">
       <div v-if="isMobile">
         <q-icon name="menu" size="sm" class="cursor-pointer q-pr-sm" @click="toggleDrawer"/>
       </div>
-      <img src="~assets/Logo.svg" alt="MESMLMNCE LOGO" :width="isMobile ? 40: 75">
+      <img src="~assets/Logo.svg" alt="MESMLMNCE LOGO" :width="isMobile ? 40: 75" @click="this.$router.push({name: 'home'})">
 
-      <div class="q-px-md">
+      <div class="q-px-md" @click="this.$router.push({name: 'home'})">
         <small class="fw-700">
           Malnad Education Society &#174;
         </small>
@@ -38,8 +38,8 @@
      M.L Manjaiah Setty Narasimha Setty College of Education
   </marquee>
   <div class="row items-center align-center justify-evenly fw-600 menu no-wrap header-component" v-if="!isMobile">
-    <div class="cursor-pointer nav-item">HOME</div>
-    <div class="cursor-pointer nav-item" @click="goToAbout">ABOUT US</div>
+    <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'home'})">HOME</div>
+    <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'about'})">ABOUT US</div>
     <div class="cursor-pointer nav-item">ACADEMIA</div>
     <div class="cursor-pointer nav-item">NAAC</div>
     <div class="cursor-pointer nav-item">NCTE</div>
@@ -60,9 +60,9 @@
       Malnad Education Society &#174;
     </small>
     <div class="text-center fw-600"> M.L Manjaiah Setty Narasimha Setty College of Teacher Education</div>
-    <div class="fs-16">MLMN College of Education</div>
+    <div class="fs-16 text-center">MLMN College of Education</div>
     <div class="bordered-class q-my-sm"></div>
-    <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">HOME</div>
+    <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16" @click="goTo('home')">HOME</div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">
       <q-expansion-item
       label="ABOUT US"
@@ -70,8 +70,8 @@
       group="somegroup"
       dense
       >
-        <div class="q-py-sm cursor-pointer fs-12">ABOUT MLMNCE</div>
-        <div class="q-py-sm cursor-pointer fs-12">Management</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('about')">ABOUT MLMNCE</div>
+        <div class="q-py-sm cursor-pointer fs-12"  @click="goTo('management')">Management</div>
         <div class="q-py-sm cursor-pointer fs-12">Staff</div>
         <div class="q-py-sm cursor-pointer fs-12">Toppers</div>
         <div class="q-py-sm cursor-pointer fs-12">Infrastructure</div>
@@ -179,8 +179,11 @@ export default {
     toggleDrawer () {
       this.isDrawer = !this.isDrawer
     },
-    goToAbout () {
-      this.$router.push('/about')
+    goTo(route) {
+      this.isDrawer = false
+      this.$router.push({
+        name: route
+      })
     }
   }
 }

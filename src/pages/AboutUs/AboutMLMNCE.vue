@@ -1,7 +1,7 @@
 <template>
 <div :class="!isMobile? 'q-pa-lg' : 'q-pa-md'">
   <div style="color:#303a57" class="fw-500 fs-24">ABOUT MLMNCE</div>
-  <div class="row justify-center align-center items-center">
+  <div class="row justify-center align-center items-center q-mt-md ">
     <img src="https://i.ibb.co/vPcMQRF/college-landscape-1-compressed-3.jpg" alt="MLMNCE">
   </div>
   <div class="q-mt-lg fw-400 fs-20" style="color:#303a57">WHO WE ARE</div>

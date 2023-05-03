@@ -6,8 +6,8 @@
         <div class="col-md-2 col-sm-3 q-py-md q-pl-md" v-if="!isMobile">
           <div class="fs-20 text-color-blue q-mt-md">ABOUT US</div>
           <div class="column q-gutter-md q-mb-lg q-mt-sm">
-            <div class="fs-14 fw-500 cursor-pointer">About MLMNCE</div>
-            <div class="fs-14 fw-500 cursor-pointer">Management</div>
+            <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'about' ? 'text-highlight': ''" @click="this.$router.push({name: 'about'})">About MLMNCE</div>
+            <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'management' ? 'text-highlight': ''" @click="this.$router.push({name: 'management'})">Management</div>
             <div class="fs-14 fw-500 cursor-pointer">Staff</div>
             <div class="fs-14 fw-500 cursor-pointer">Toppers</div>
             <div class="fs-14 fw-500 cursor-pointer">Infrastructure</div>
@@ -48,8 +48,11 @@ export default {
     },
     isDesktop () {
       return this.$q.screen.gt.md
+    },
+    getRouteName () {
+      return this.$route.name
     }
-  },
+  }
 }
 </script>
 
