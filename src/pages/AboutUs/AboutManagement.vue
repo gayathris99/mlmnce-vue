@@ -1,5 +1,5 @@
 <template>
-  <div :class="!isMobile? 'q-pa-lg' : 'q-pa-lg'">
+  <div class="q-pa-lg">
     <div style="color:#303a57" class="fw-500 fs-24">MANAGEMENT</div>
     <div class="row justify-center align-center items-center q-mt-md hero-image">
       <img src=" https://i.ibb.co/xLbWj2f/MES-ADMINISTRATIVE-GROUP-PHOTO.png" alt="MLMNCE">

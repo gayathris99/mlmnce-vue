@@ -9,7 +9,7 @@
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'about' ? 'text-highlight': ''" @click="this.$router.push({name: 'about'})">About MLMNCE</div>
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'management' ? 'text-highlight': ''" @click="this.$router.push({name: 'management'})">Management</div>
             <div class="fs-14 fw-500 cursor-pointer">Staff</div>
-            <div class="fs-14 fw-500 cursor-pointer">Toppers</div>
+            <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'toppers' ? 'text-highlight': ''" @click="this.$router.push({name: 'toppers'})">Toppers</div>
             <div class="fs-14 fw-500 cursor-pointer">Infrastructure</div>
           </div>
           <div class="important-links">

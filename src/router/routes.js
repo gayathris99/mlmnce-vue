@@ -12,7 +12,8 @@ const routes = [
     component: () => import('layouts/AboutLayout.vue'),
     children: [
       { path: '', component: () => import('pages/AboutUs/AboutMLMNCE.vue'), name: 'about' },
-      { path: 'management', component: () => import('src/pages/AboutUs/AboutManagement.vue'), name: 'management' }
+      { path: 'management', component: () => import('src/pages/AboutUs/AboutManagement.vue'), name: 'management' },
+      { path: 'toppers', component: () => import('src/pages/AboutUs/AboutToppers.vue'), name: 'toppers' }
     ]
   },
 
