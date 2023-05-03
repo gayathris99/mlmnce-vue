@@ -38,8 +38,8 @@
      M.L Manjaiah Setty Narasimha Setty College of Education
   </marquee>
   <div class="row items-center align-center justify-evenly fw-600 menu no-wrap header-component" v-if="!isMobile">
-    <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'home'})">HOME</div>
-    <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'about'})">ABOUT US</div>
+    <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'home'})" :class="this.$route.name === 'home' ? 'bordered-class' : ''">HOME</div>
+    <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'about'})" :class="this.$route.fullPath.includes('about') ? 'bordered-class' : ''">ABOUT US</div>
     <div class="cursor-pointer nav-item">ACADEMIA</div>
     <div class="cursor-pointer nav-item">NAAC</div>
     <div class="cursor-pointer nav-item">NCTE</div>
@@ -207,7 +207,7 @@ a {
   border-top: 3px solid #cf050d
 }
 .bordered-class {
-  border: 0.5px solid #cf050d;
+  border-top: 3px solid #cf050d;
 }
 :deep(.q-item) {
   padding: 0px !important;
