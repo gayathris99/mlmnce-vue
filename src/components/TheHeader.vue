@@ -88,7 +88,7 @@
         <div class="q-py-sm cursor-pointer fs-12" @click="goTo('affiliation-order')">Affiliation Order</div>
         <div class="q-py-sm cursor-pointer fs-12 " @click="goTo('student-community')">Student Community</div>
         <!-- <div class="q-py-sm cursor-pointer fs-12" @click="goTo('admissions')">Admissions</div> -->
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('course-structure')">Course Structure</div>
+        <!-- <div class="q-py-sm cursor-pointer fs-12" @click="goTo('course-structure')">Course Structure</div> -->
         <div class="q-py-sm cursor-pointer fs-12" @click="goTo('syllabus')">Syllabus</div>
       </q-expansion-item>
     </div>

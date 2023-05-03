@@ -10,7 +10,7 @@
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'affiliation-order' ? 'text-highlight': ''" @click="this.$router.push({name: 'affiliation-order'})">Affiliation Order</div>
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'student-community' ? 'text-highlight': ''" @click="this.$router.push({name: 'student-community'})">Student Community</div>
             <!-- <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'admissions' ? 'text-highlight': ''" @click="this.$router.push({name: 'admissions'})">Admissions</div> -->
-            <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'course-structure' ? 'text-highlight': ''" @click="this.$router.push({name: 'course-structure'})">Course Structure</div>
+            <!-- <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'course-structure' ? 'text-highlight': ''" @click="this.$router.push({name: 'course-structure'})">Course Structure</div> -->
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'syllabus' ? 'text-highlight': ''" @click="this.$router.push({name: 'syllabus'})">Syllabus</div>
           </div>
           <div class="library-links q-my-md">
