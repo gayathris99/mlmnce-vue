@@ -39,7 +39,7 @@
   </marquee>
   <div class="row items-center align-center justify-evenly fw-600 menu no-wrap header-component" v-if="!isMobile">
     <div class="cursor-pointer nav-item">HOME</div>
-    <div class="cursor-pointer nav-item">ABOUT US</div>
+    <div class="cursor-pointer nav-item" @click="goToAbout">ABOUT US</div>
     <div class="cursor-pointer nav-item">ACADEMIA</div>
     <div class="cursor-pointer nav-item">NAAC</div>
     <div class="cursor-pointer nav-item">NCTE</div>
@@ -178,6 +178,9 @@ export default {
   methods: {
     toggleDrawer () {
       this.isDrawer = !this.isDrawer
+    },
+    goToAbout () {
+      this.$router.push('/about')
     }
   }
 }
