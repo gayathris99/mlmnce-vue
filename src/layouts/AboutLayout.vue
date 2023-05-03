@@ -8,9 +8,9 @@
           <div class="column q-gutter-md q-mb-lg q-mt-sm">
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'about' ? 'text-highlight': ''" @click="this.$router.push({name: 'about'})">About MLMNCE</div>
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'management' ? 'text-highlight': ''" @click="this.$router.push({name: 'management'})">Management</div>
-            <div class="fs-14 fw-500 cursor-pointer">Staff</div>
+            <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'staff' ? 'text-highlight': ''" @click="this.$router.push({name: 'staff'})">Staff</div>
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'toppers' ? 'text-highlight': ''" @click="this.$router.push({name: 'toppers'})">Toppers</div>
-            <div class="fs-14 fw-500 cursor-pointer">Infrastructure</div>
+            <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'infra' ? 'text-highlight': ''" @click="this.$router.push({name: 'infra'})">Infrastructure</div>
           </div>
           <div class="important-links">
             <div style="color:#ff0302" class="q-mb-sm fs-20">IMPORTANT LINKS</div>

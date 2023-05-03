@@ -72,9 +72,9 @@
       >
         <div class="q-py-sm cursor-pointer fs-12" @click="goTo('about')">ABOUT MLMNCE</div>
         <div class="q-py-sm cursor-pointer fs-12"  @click="goTo('management')">Management</div>
-        <div class="q-py-sm cursor-pointer fs-12">Staff</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('infra')">Staff</div>
         <div class="q-py-sm cursor-pointer fs-12" @click="goTo('toppers')">Toppers</div>
-        <div class="q-py-sm cursor-pointer fs-12">Infrastructure</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('infra')">Infrastructure</div>
       </q-expansion-item>
     </div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">
