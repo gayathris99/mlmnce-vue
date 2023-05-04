@@ -1,0 +1,3 @@
+<template>
+  StudentSurvey.vue
+</template>

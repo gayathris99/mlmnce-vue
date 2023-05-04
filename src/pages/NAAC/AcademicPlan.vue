@@ -1,0 +1,3 @@
+<template>
+  AcademicPlan.vue
+</template>

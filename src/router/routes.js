@@ -32,6 +32,20 @@ const routes = [
     ]
 
   },
+  {
+    path: '/naac',
+    component: () => import('layouts/NAACLayout.vue'),
+    children: [
+      { path: '', component: () => import('pages/NAAC/NAACCertificate.vue'), name: 'naac-certificate' },
+      { path: 'academic-plan', component: () => import('pages/NAAC/AcademicPlan.vue'), name: 'academic-plan' },
+      { path: 'iqac-reports', component: () => import('pages/NAAC/IQACReports.vue'), name: 'iqac-reports' },
+      { path: 'iqac-compositions', component: () => import('pages/NAAC/IQACCompositions.vue'), name: 'iqac-compositions' },
+      { path: 'aqar', component: () => import('pages/NAAC/AQARComponent.vue'), name: 'aqar' },
+      { path: 'best-practices', component: () => import('pages/NAAC/BestPractices.vue'), name: 'best-practices' },
+      { path: 'student-survey', component: () => import('pages/NAAC/StudentSurvey.vue'), name: 'student-survey' },
+      { path: 'others', component: () => import('pages/NAAC/OthersComponent.vue'), name: 'others' },
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it

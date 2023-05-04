@@ -41,7 +41,7 @@
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'home'})" :class="this.$route.name === 'home' ? 'bordered-class' : ''">HOME</div>
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'about'})" :class="this.$route.fullPath.includes('about') ? 'bordered-class' : ''">ABOUT US</div>
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'library'})" :class="this.$route.fullPath.includes('academia') ? 'bordered-class' : ''">ACADEMIA</div>
-    <div class="cursor-pointer nav-item">NAAC</div>
+    <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'naac-certificate'})" :class="this.$route.fullPath.includes('naac') ? 'bordered-class' : ''">NAAC</div>
     <div class="cursor-pointer nav-item">NCTE</div>
     <div class="cursor-pointer nav-item">ACTIVITIES</div>
     <div class="cursor-pointer nav-item">DOWNLOADS</div>
@@ -99,14 +99,14 @@
       group="somegroup"
       dense
       >
-        <div class="q-py-sm cursor-pointer fs-12">NAAC Certificate</div>
-        <div class="q-py-sm cursor-pointer fs-12">Annual Academic Plan</div>
-        <div class="q-py-sm cursor-pointer fs-12">IQAC Reports</div>
-        <div class="q-py-sm cursor-pointer fs-12">IQAC Compositions</div>
-        <div class="q-py-sm cursor-pointer fs-12">AQAR</div>
-        <div class="q-py-sm cursor-pointer fs-12">Best Practices</div>
-        <div class="q-py-sm cursor-pointer fs-12">Student Satisfaction Survey</div>
-        <div class="q-py-sm cursor-pointer fs-12">Others</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('naac-certificate')">NAAC Certificate</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('academic-plan')">Annual Academic Plan</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('iqac-reports')">IQAC Reports</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('iqac-compositions')">IQAC Compositions</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('aqar')">AQAR</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('best-practices')">Best Practices</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('student-survey')">Student Satisfaction Survey</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('others')">Others</div>
       </q-expansion-item>
     </div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">

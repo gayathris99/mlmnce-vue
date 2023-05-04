@@ -1,0 +1,3 @@
+<template>
+  AQARComponent.vue
+</template>

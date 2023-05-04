@@ -1,0 +1,3 @@
+<template>
+  OthersComponent.vue
+</template>

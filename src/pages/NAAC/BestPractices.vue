@@ -1,0 +1,3 @@
+<template>
+  BestPractices.vue
+</template>
