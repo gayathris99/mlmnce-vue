@@ -42,7 +42,7 @@
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'about'})" :class="this.$route.fullPath.includes('about') ? 'bordered-class' : ''">ABOUT US</div>
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'library'})" :class="this.$route.fullPath.includes('academia') ? 'bordered-class' : ''">ACADEMIA</div>
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'naac-certificate'})" :class="this.$route.fullPath.includes('naac') ? 'bordered-class' : ''">NAAC</div>
-    <div class="cursor-pointer nav-item">NCTE</div>
+    <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'ncte-recognition'})">NCTE</div>
     <div class="cursor-pointer nav-item">ACTIVITIES</div>
     <div class="cursor-pointer nav-item">DOWNLOADS</div>
     <div class="cursor-pointer nav-item">GALLERY</div>
@@ -116,11 +116,11 @@
       group="somegroup"
       dense
       >
-        <div class="q-py-sm cursor-pointer fs-12">NCTE - Recognition</div>
-        <div class="q-py-sm cursor-pointer fs-12">NCTE Affidavit</div>
-        <div class="q-py-sm cursor-pointer fs-12">Deposit Bonds</div>
-        <div class="q-py-sm cursor-pointer fs-12">Audit Reports</div>
-        <div class="q-py-sm cursor-pointer fs-12">Mandatory Disclosure</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="this.$router.push({name: 'ncte-recognition'})">NCTE - Recognition</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="this.$router.push({name: 'ncte-affidavit'})">NCTE Affidavit</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="this.$router.push({name: 'deposit-bonds'})">Deposit Bonds</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="this.$router.push({name: 'audit-reports'})">Audit Reports</div>
+        <div class="q-py-sm cursor-pointer fs-12" @click="this.$router.push({name: 'mandatory-disclosure'})">Mandatory Disclosure</div>
       </q-expansion-item>
     </div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">

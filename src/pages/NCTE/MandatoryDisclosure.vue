@@ -1,0 +1,3 @@
+<template>
+  mandatory disclosure
+</template>

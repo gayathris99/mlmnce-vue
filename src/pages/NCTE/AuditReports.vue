@@ -1,0 +1,3 @@
+<template>
+  audit reports
+</template>

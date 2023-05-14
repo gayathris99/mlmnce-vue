@@ -46,6 +46,17 @@ const routes = [
       { path: 'others', component: () => import('pages/NAAC/OthersComponent.vue'), name: 'others' },
     ]
   },
+  {
+    path: '/ncte',
+    component: () => import('layouts/NCTELayout.vue'),
+    children: [
+      { path: '', component: () => import('src/pages/NCTE/NCTERecognition.vue'), name: 'ncte-recognition' },
+      { path: 'ncte-affidavit', component: () => import('src/pages/NCTE/NCTEAffidavit.vue'), name: 'ncte-affidavit' },
+      { path: 'mandatory-disclosure', component: () => import('src/pages/NCTE/MandatoryDisclosure.vue'), name: 'mandatory-disclosure' },
+      { path: 'audit-reports', component: () => import('src/pages/NCTE/AuditReports.vue'), name: 'audit-reports' },
+      { path: 'deposit-bonds', component: () => import('src/pages/NCTE/DepositBonds.vue'), name: 'deposit-bonds' },
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it
