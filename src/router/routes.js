@@ -57,6 +57,14 @@ const routes = [
       { path: 'deposit-bonds', component: () => import('src/pages/NCTE/DepositBonds.vue'), name: 'deposit-bonds' },
     ]
   },
+  {
+    path: '/activities',
+    component: () => import('layouts/ActivityLayout.vue'),
+    children: [
+      { path: 'facebook', component: () => import('src/pages/Activities/FacebookActivities.vue'), name: 'facebook' },
+      { path: 'youtube', component: () => import('src/pages/Activities/YoutubeActivities.vue'), name: 'youtube' },
+    ]
+  },
 
   // Always leave this as last one,
   // but you can also remove it
