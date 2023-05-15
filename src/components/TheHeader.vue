@@ -1,7 +1,7 @@
 <template>
 <div >
-  <div class="row items-center align-center no-wrap q-pa-md" :class="isDesktop ? '' : 'justify-start'">
-    <div class="row-items row  items-center no-wrap col-md-9 col-sm-8 cursor-pointer">
+  <div class="row items-center align-center no-wrap q-pa-md justify-around">
+    <div class="row-items row  items-center no-wrap  cursor-pointer">
       <div v-if="isMobile">
         <q-icon name="menu" size="sm" class="cursor-pointer q-pr-sm" @click="toggleDrawer"/>
       </div>
@@ -19,7 +19,7 @@
 
 
     </div>
-    <div class=" q-pt-sm col-md-3 col-sm-4" v-if="!isMobile">
+    <div class=" q-pt-sm " v-if="!isMobile">
       <a href="mailto:prinicipalmesmlmnce@gmail.com" class="row q-gutter-xs q-pb-sm items-center">
         <q-icon name="email"/>
         <small>prinicipalmesmlmnce@gmail.com</small>
