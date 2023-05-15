@@ -1,7 +1,7 @@
 <template>
 <div :class="!isMobile? 'q-pa-lg' : 'q-pa-md'">
   <div style="color:#303a57" class="fw-500 fs-24">ABOUT MLMNCE</div>
-  <div class="row justify-center align-center items-center q-mt-md ">
+  <div class="row justify-center align-center items-center q-mt-md hero-image">
     <img src="https://i.ibb.co/vPcMQRF/college-landscape-1-compressed-3.jpg" alt="MLMNCE">
   </div>
   <div class="q-mt-lg fw-400 fs-20" style="color:#303a57">WHO WE ARE</div>
@@ -42,8 +42,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-img {
-  width: 100%;
-  max-height: 500px;
+.hero-image {
+  img {
+  width: 90%;
+  max-height: 450px;
+  @media only screen and (max-width: $breakpoint-sm-max) and (min-width: $breakpoint-sm-min) {
+    width: 100%;
+    height: 175px;
+  }
+}
 }
 </style>

@@ -89,9 +89,13 @@ export default {
 
 <style lang="scss" scoped>
 .hero-image {
-img {
-  width: 100%;
-  max-height: 500px;
+  img {
+  width: 90%;
+  max-height: 400px;
+  @media only screen and (max-width: $breakpoint-sm-max) and (min-width: $breakpoint-sm-min) {
+    width: 100%;
+    height: 175px;
+  }
 }
 }
 .team-members {
