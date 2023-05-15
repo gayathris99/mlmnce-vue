@@ -2,7 +2,7 @@
   <div class="q-pa-lg">
     <div style="color:#303a57" class="fw-500 fs-24">YOUTUBE EVENT UPDATES</div>
     <div class="main-video q-mt-md row justify-center">
-      <iframe :src="playerLink" allowfullscreen allow="autoplay"/>
+      <iframe :src="playerLink" allowfullscreen allow="autoplay" frameBorder="0"/>
     </div>
     <div class="video-list-container q-pa-md q-mt-lg row items-center justify-evenly align-center wrap q-gutter-md" v-if="youtubeData.length">
       <div v-for="(video, key) in youtubeData" :key="key" class="cursor-pointer" @click="playVideo(video.id)">
