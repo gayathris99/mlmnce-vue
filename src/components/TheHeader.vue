@@ -1,6 +1,6 @@
 <template>
 <div >
-  <div class="row items-center align-center no-wrap q-pa-md justify-around">
+  <div class="row items-center align-center no-wrap q-pa-md justify-evenly">
     <div class="row-items row  items-center no-wrap  cursor-pointer">
       <div v-if="isMobile">
         <q-icon name="menu" size="sm" class="cursor-pointer q-pr-sm" @click="toggleDrawer"/>
