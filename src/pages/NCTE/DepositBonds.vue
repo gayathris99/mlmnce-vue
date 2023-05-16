@@ -1,7 +1,6 @@
 <template>
   <div class="q-pa-lg">
     <div style="color:#303a57" class="fw-500 fs-24">DEPOSIT BONDS</div>
-    <a href="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/depositbonds/Deposit-bonds.jpeg" download >check</a>
     <div class="row align-center items-center justify-evenly q-mt-md q-gutter-md">
         <div class="column">
           <div class="row justify-end">

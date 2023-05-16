@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-lg">
-    <div style="color:#303a57" class="fw-500 fs-24">DEPOSIT BONDS</div>
+    <div style="color:#303a57" class="fw-500 fs-24">NCTE AFFIDAVITS</div>
     <div class="row align-center items-center justify-evenly q-mt-md q-gutter-md">
         <div class="column">
           <div class="row justify-end">
