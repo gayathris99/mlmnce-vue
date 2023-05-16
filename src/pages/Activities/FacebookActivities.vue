@@ -1,5 +1,5 @@
 <template>
-  <div class="q-pa-lg">
+  <div class="q-pa-lg page-container">
     <div style="color:#303a57" class="fw-500 fs-24">FACEBOOK EVENT UPDATES</div>
     <div class="facebook-post-container q-pa-md q-mt-sm row items-center justify-evenly align-center wrap q-gutter-x-md q-gutter-y-lg" v-if="facebookData.length">
       <div v-for="(post, key) in facebookData" :key="key">
