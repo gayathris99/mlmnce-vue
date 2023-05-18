@@ -16,8 +16,11 @@ export default {
   methods: {
     onShare () {
       window.open('https://drive.google.com/file/d/1zwcdRwsau9Bvc-3Fh6HwavhjS1f_c8oD/view', '_blank')
+    },
+    onDownload () {
+      window.open('https://www.googleapis.com/drive/v3/files/1zwcdRwsau9Bvc-3Fh6HwavhjS1f_c8oD?alt=media&key=AIzaSyBBlQv6sK0y25G-P1D8DxoehG60kp7jHiE', '_blank')
     }
-  }
+   }
 }
 </script>
 
