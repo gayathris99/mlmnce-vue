@@ -66,6 +66,11 @@ const routes = [
     ]
   },
   {
+    path: '/downloads',
+    name: 'downloads',
+    component: () => import('layouts/DownloadsLayout.vue'),
+  },
+  {
     path: '/gallery',
     component: () => import('layouts/GalleryLayout.vue'),
     name: 'gallery'

@@ -89,7 +89,6 @@ export default {
           })
           this.facebookData.push(postObj)
         })
-        console.log(this.facebookData)
     }
   },
   computed: {
