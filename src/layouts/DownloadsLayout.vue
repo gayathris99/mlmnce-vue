@@ -5,11 +5,26 @@
       <div class="row align-center no-wrap">
         <div class="col-md-2 col-sm-3 q-py-md q-pl-md" v-if="!isMobile">
           <div class="fs-20 text-color-blue q-mt-md">FOLDERS</div>
-          <div class="column q-gutter-md q-mb-lg q-mt-sm">
+          <div class="column q-gutter-md q-mb-lg q-mt-sm" v-if="downloadDetails?.length">
+            <div v-for="(downloadDetail,key) in downloadDetails" :key="key">
+              <div class="fs-14 fw-500 cursor-pointer" :class="selectedFolder === downloadDetail?.album ? 'text-highlight' : ''" @click="selectFolder(downloadDetail)">{{downloadDetail?.album}}</div>
+            </div>
           </div>
         </div>
         <q-separator vertical color="#b6c8d8" v-if="!isMobile" class="q-ml-sm"/>
-        <router-view class="col-md-10 col-sm-9 col-xs-12"/>
+        <div class="col-md-10 col-sm-9 col-xs-12 q-pa-lg">
+           <div style="color:#303a57" class="fw-500 fs-24">{{selectedFolder}}</div>
+          <div class="row align-center items-center justify-start q-mt-md q-gutter-md">
+            <div v-for="(folder, key) in selectedFolderDetails" :key="key">
+              <a :href="folder.file" target="_blank">
+              <div class="col-2  column items-center">
+                <img :src="getFileType(folder)" alt="">
+                <div class="fs-12 q-mt-md">{{folder.title}}</div>
+              </div>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </q-page-container>
     <the-footer class="footer"/>
@@ -19,12 +34,26 @@
 <script>
 import TheHeader from 'src/components/TheHeader.vue'
 import TheFooter from 'src/components/TheFooter.vue'
+import axios from 'axios'
 
 export default {
   name: 'AcademiaLayout',
   components: {
     TheHeader,
     TheFooter
+  },
+  data () {
+    return {
+      downloadDetails: [],
+      selectedFolderDetails: [],
+      selectedFolder: '',
+      imagesForFileType: {
+        pdf: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/helper-images/PdfLogo.png',
+        image: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/helper-images/ImageLogo.png',
+        excel: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/helper-images/SheetLogo.png',
+        file: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/helper-images/icons8-document-480.png'
+      }
+    }
   },
   computed: {
     isMobile () {
@@ -38,7 +67,35 @@ export default {
     },
     getRouteName () {
       return this.$route.name
+    },
+  },
+  methods: {
+    async getDownloadDetails () {
+      const { data } = await axios.get('https://platform.foxgloveteam.com/collegewebsite/download-details')
+      this.downloadDetails = data
+      this.selectedFolder = data[0]?.album
+      this.getSelectedFolderDetails(data[0]?.album)
+    },
+    selectFolder ({ album }) {
+      this.selectedFolder = album
+      this.getSelectedFolderDetails(album)
+    },
+    async getSelectedFolderDetails (album) {
+      const { data } = await axios.get(`https://platform.foxgloveteam.com/collegewebsite/download-details/${album}`)
+      this.selectedFolderDetails = data
+    },
+    getFileType ({ file }) {
+      const isImage = file.toLowerCase().includes('.jpg') || file.toLowerCase().includes('.png') || file.toLowerCase().includes('.jpeg')
+      const isPdf = file.toLowerCase().includes('.pdf')
+      const isExcel = file.toLowerCase().includes('.xlsx')
+      if (isImage) return this.imagesForFileType.image
+      else if (isPdf) return this.imagesForFileType.pdf
+      else if (isExcel) return this.imagesForFileType.excel
+      else return this.imagesForFileType.file
     }
+  },
+  mounted () {
+    this.getDownloadDetails()
   }
 }
 </script>
@@ -56,5 +113,13 @@ a {
 }
 .footer {
   height: 50px;
+}
+img {
+  width: 75px;
+  height: 75px;
+}
+a {
+  text-decoration: none;
+  color: $dark;
 }
 </style>
