@@ -65,6 +65,11 @@ const routes = [
       { path: 'youtube', component: () => import('src/pages/Activities/YoutubeActivities.vue'), name: 'youtube' },
     ]
   },
+  {
+    path: '/gallery',
+    component: () => import('layouts/GalleryLayout.vue'),
+    name: 'gallery'
+  },
 
   // Always leave this as last one,
   // but you can also remove it

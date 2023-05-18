@@ -1,41 +1,33 @@
 <template>
   <div class="q-pa-lg">
-    <div style="color:#303a57" class="fw-500 fs-24">NAAC CERTIFICATE</div>
-    <!-- <q-btn label="download" @click="downloadItem"></q-btn> -->
+    <div style="color:#303a57" class="fw-500 fs-24 q-mb-md">NAAC CERTIFICATE</div>
+    <div class="column">
+      <div class="row justify-end">
+        <q-icon name="download" class="cursor-pointer" size="sm" @click="onDownload"></q-icon>
+        <q-icon name="share" class="cursor-pointer" size="sm"  @click="onShare"></q-icon>
+      </div>
+      <img src="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/naac/Certificate/NAAC-Certification.png"  alt="">
+    </div>
   </div>
 </template>
 
 <script>
-import axios from 'axios'
 export default {
-  data () {
-    return {
-      // pdfLink: require("../../assets/NAACCertificate.pdf")
-    }
-  },
   methods: {
-    downloadItem () {
-    //   axios({
-    //     url: this.pdfLink, // File URL Goes Here
-    //     method: 'GET',
-    //     responseType: 'blob',
-    // }).then((res) => {
-    //                  var FILE = window.URL.createObjectURL(new Blob([res.data]));
-
-    //                  var docUrl = document.createElement('x');
-    //                  docUrl.href = FILE;
-    //                  docUrl.setAttribute('download', 'file.pdf');
-    //                  document.body.appendChild(docUrl);
-    //                  docUrl.click();
-    //             });
-      var FILE = window.URL.createObjectURL(new Blob([this.pdfLink]));
-
-      var docUrl = document.createElement('x');
-      docUrl.href = FILE;
-      docUrl.setAttribute('download', 'file.pdf');
-      document.body.appendChild(docUrl);
-      docUrl.click();
+    onShare () {
+      window.open('https://drive.google.com/file/d/1zwcdRwsau9Bvc-3Fh6HwavhjS1f_c8oD/view', '_blank')
+    }
   }
 }
-}
 </script>
+
+<style lang="scss" scoped>
+img {
+  width: 100%;
+  height: 700px;
+    @media only screen and (max-width: $breakpoint-xs-max) {
+      // width: 250px;
+      height: 400px;
+    }
+}
+</style>

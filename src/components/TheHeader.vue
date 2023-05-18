@@ -44,8 +44,8 @@
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'naac-certificate'})" :class="this.$route.fullPath.includes('naac') ? 'bordered-class' : ''">NAAC</div>
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'ncte-recognition'})" :class="this.$route.fullPath.includes('ncte') ? 'bordered-class' : ''">NCTE</div>
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'facebook'})" :class="this.$route.fullPath.includes('activities') ? 'bordered-class' : ''">ACTIVITIES</div>
-    <div class="cursor-pointer nav-item">DOWNLOADS</div>
-    <div class="cursor-pointer nav-item">GALLERY</div>
+    <div class="cursor-pointer nav-item" >DOWNLOADS</div>
+    <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'gallery'})" :class="this.$route.fullPath.includes('gallery') ? 'bordered-class' : ''">GALLERY</div>
   </div>
   <q-drawer
   v-if="isMobile"
@@ -135,7 +135,7 @@
       </q-expansion-item>
     </div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">DOWNLOADS</div>
-    <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">GALLERY</div>
+    <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16" @click="this.$router.push({name: 'gallery'})">GALLERY</div>
     <div class="q-pt-lg">
       <a href="mailto:prinicipalmesmlmnce@gmail.com" class="row q-gutter-xs q-pb-sm items-center">
         <q-icon name="email"/>
