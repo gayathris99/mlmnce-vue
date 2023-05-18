@@ -59,6 +59,7 @@ link.click();
 img {
   width: 950px;
   height: 700px;
+  border: 0.5px solid grey;
     @media only screen and (max-width: $breakpoint-sm-max) {
       width: 500px;
       height: 400px;

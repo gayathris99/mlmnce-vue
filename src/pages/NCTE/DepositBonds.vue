@@ -101,6 +101,7 @@ export default {
 img {
   width: 500px;
   height: 700px;
+  border: 0.5px solid grey;
     @media only screen and (max-width: $breakpoint-xs-max) {
       width: 250px;
       height: 400px;
