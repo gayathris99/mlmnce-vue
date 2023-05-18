@@ -13,7 +13,10 @@
         </div>
         <q-separator vertical color="#b6c8d8" v-if="!isMobile" class="q-ml-sm"/>
         <div class="col-md-10 col-sm-9 col-xs-12 q-pa-lg">
-           <div style="color:#303a57" class="fw-500 fs-24">{{selectedFolder}}</div>
+          <div v-if="isMobile">
+            <q-select outlined  v-model="selectedFolder" map-options emit-value :options="options" />
+          </div>
+          <div v-else style="color:#303a57" class="fw-500 fs-24">{{selectedFolder}}</div>
           <div class="row align-center items-center justify-start q-mt-md q-gutter-md">
             <div v-for="(folder, key) in selectedFolderDetails" :key="key">
               <a :href="folder.file" target="_blank">
@@ -52,7 +55,8 @@ export default {
         image: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/helper-images/ImageLogo.png',
         excel: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/helper-images/SheetLogo.png',
         file: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/helper-images/icons8-document-480.png'
-      }
+      },
+      options: []
     }
   },
   computed: {
@@ -69,18 +73,34 @@ export default {
       return this.$route.name
     },
   },
+  watch: {
+    selectedFolder: {
+      immediate: true,
+      deep: true,
+      handler (newVal) {
+        this.getSelectedFolderDetails(newVal)
+      }
+    }
+  },
   methods: {
     async getDownloadDetails () {
       const { data } = await axios.get('https://platform.foxgloveteam.com/collegewebsite/download-details')
       this.downloadDetails = data
       this.selectedFolder = data[0]?.album
       this.getSelectedFolderDetails(data[0]?.album)
+      data?.forEach(val => {
+        this.options.push({
+          label: val.album,
+          value: val.album
+        })
+      })
     },
     selectFolder ({ album }) {
       this.selectedFolder = album
-      this.getSelectedFolderDetails(album)
+      // this.getSelectedFolderDetails(album)
     },
     async getSelectedFolderDetails (album) {
+      this.selectedFolderDetails = []
       const { data } = await axios.get(`https://platform.foxgloveteam.com/collegewebsite/download-details/${album}`)
       this.selectedFolderDetails = data
     },
