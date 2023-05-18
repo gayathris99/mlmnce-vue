@@ -4,10 +4,10 @@
     <div class="row align-center items-center justify-evenly q-mt-md q-gutter-md">
         <div class="column">
           <div class="row justify-end">
-            <q-icon name="download" class="cursor-pointer" size="sm" @click="onDownload(0)"></q-icon>
-            <q-icon name="share" class="cursor-pointer" size="sm"  @click="onShare(0)"></q-icon>
+            <q-icon name="download" class="cursor-pointer" size="sm" @click="onDownload"></q-icon>
+            <q-icon name="share" class="cursor-pointer" size="sm"  @click="onShare"></q-icon>
           </div>
-          <img src=""  alt="">
+          <img src="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/affidavit/NCTE-Affidavit.png"  alt="">
         </div>
     </div>
   </div>
@@ -22,9 +22,8 @@ export default {
     }
   },
   methods: {
-    onShare(index) {
-      // this.$router.go(this.links[index])
-      window.open(this.links[index], '_blank');
+    onShare() {
+      window.open('https://drive.google.com/file/d/1EuMB5zNpIBV-8JvaSYNSXoGCTRM_l2eo/view', '_blank');
     },
     onDownload (index) {
       // const url = window.URL.createObjectURL(new Blob([this.links[index]]))
@@ -58,10 +57,14 @@ link.click();
 
 <style lang="scss" scoped>
 img {
-  width: 500px;
+  width: 950px;
   height: 700px;
+    @media only screen and (max-width: $breakpoint-sm-max) {
+      width: 500px;
+      height: 400px;
+    }
     @media only screen and (max-width: $breakpoint-xs-max) {
-      width: 250px;
+      width: 300px;
       height: 400px;
     }
 }
