@@ -5,7 +5,7 @@
         <div v-for="(file, key) in files" :key="key">
           <div class="column">
             <div class="row justify-end">
-              <q-icon name="download" class="cursor-pointer" size="sm" @click="onDownload(0)"></q-icon>
+              <q-icon name="download" class="cursor-pointer" size="sm" @click="onDownload(file)"></q-icon>
               <q-icon name="share" class="cursor-pointer" size="sm"  @click="onShare(file.fileLink)"></q-icon>
             </div>
             <img :src="file.image"  alt="">
@@ -24,15 +24,18 @@ export default {
       files: [
         {
           image: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/recognition/NCTE-Recognition.png',
-          fileLink: 'https://drive.google.com/file/d/1_GgOBDDNevGIHsedBDsq4Y_5Mj9TnhED/view'
+          fileLink: 'https://drive.google.com/file/d/1_GgOBDDNevGIHsedBDsq4Y_5Mj9TnhED/view',
+          downloadLink: 'https://drive.google.com/u/0/uc?id=1_GgOBDDNevGIHsedBDsq4Y_5Mj9TnhED&export=download'
         },
         {
           image: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/recognition/NCTE-AOS00330-B-Ed.jpg',
-          fileLink: 'https://drive.google.com/file/d/1Wjuganaa8A4431dBUHB2uAbxkCvlHn6P/view'
+          fileLink: 'https://drive.google.com/file/d/1Wjuganaa8A4431dBUHB2uAbxkCvlHn6P/view',
+          downloadLink: 'https://drive.google.com/u/0/uc?id=1Wjuganaa8A4431dBUHB2uAbxkCvlHn6P&export=download'
         },
         {
           image: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/recognition/New-NCTE-Recognition.jpg',
-          fileLink: 'https://drive.google.com/file/d/1EtqExIftNNPlyy_KzZIV09FXuo9TNf6d/view'
+          fileLink: 'https://drive.google.com/file/d/1EtqExIftNNPlyy_KzZIV09FXuo9TNf6d/view',
+          downloadLink: 'https://drive.google.com/u/0/uc?id=1EtqExIftNNPlyy_KzZIV09FXuo9TNf6d&export=download'
         }
       ]
     }
@@ -40,6 +43,9 @@ export default {
   methods: {
     onShare (link) {
       window.open(link, '_blank')
+    },
+    onDownload (file) {
+      window.open(file.downloadLink, '_blank')
     }
   },
   computed: {

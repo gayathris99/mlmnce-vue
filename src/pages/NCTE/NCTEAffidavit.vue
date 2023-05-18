@@ -25,31 +25,8 @@ export default {
     onShare() {
       window.open('https://drive.google.com/file/d/1EuMB5zNpIBV-8JvaSYNSXoGCTRM_l2eo/view', '_blank');
     },
-    onDownload (index) {
-      // const url = window.URL.createObjectURL(new Blob([this.links[index]]))
-      // const link = document.createElement('a')
-      // link.href = url
-      // link.setAttribute('download', 'Deposit Bonds')
-      // document.body.appendChild(link)
-      // link.click()
-      const fileUrl = this.links[index]
-      const link = document.createElement('a');
-link.href = fileUrl
-link.download = "test.txt";
-link.click();
-    //   fetch(fileUrl, {
-    //   method: 'GET'
-    //   }).then(resp => resp.blob())
-    // .then(blob => {
-    //     const url = window.URL.createObjectURL(blob);
-    //     const a = document.createElement('a');
-    //     a.style.display = 'none';
-    //     a.href = url;
-    //     a.download = "name"; // the filename you want
-    //     document.body.appendChild(a);
-    //     a.click();
-    //     window.URL.revokeObjectURL(url);
-    // })
+    onDownload () {
+      window.open('https://www.googleapis.com/drive/v3/files/1EuMB5zNpIBV-8JvaSYNSXoGCTRM_l2eo?alt=media&key=AIzaSyBBlQv6sK0y25G-P1D8DxoehG60kp7jHiE', '_blank')
     }
   }
 }

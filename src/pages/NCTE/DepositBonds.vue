@@ -28,6 +28,10 @@ export default {
       links: [
         'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/depositbonds/Deposit-bonds.jpeg',
         'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/depositbonds/Ncte-Deposits.png'
+      ],
+      downloadLinks: [
+        'https://www.googleapis.com/drive/v3/files/1ObyeDhMd_OIy4O5Fv7wTjgw-p7wbaKui?alt=media&key=AIzaSyBBlQv6sK0y25G-P1D8DxoehG60kp7jHiE',
+        'https://www.googleapis.com/drive/v3/files/1fj2X7zDWUafP1WPJywWTYN2ME4U_20k8?alt=media&key=AIzaSyBBlQv6sK0y25G-P1D8DxoehG60kp7jHiE'
       ]
     }
   },
@@ -37,62 +41,8 @@ export default {
       window.open(this.links[index], '_blank');
     },
     onDownload (index) {
-      // const url = window.URL.createObjectURL(new Blob([this.links[index]]))
-      // const link = document.createElement('a')
-      // link.href = url
-      // link.setAttribute('download', 'Deposit Bonds')
-      // document.body.appendChild(link)
-      // link.click()
-      const fileUrl = this.links[index]
-//       const link = document.createElement('a');
-// link.href = fileUrl
-// link.download = "test.txt";
-// link.click();
-    //   fetch(fileUrl, {
-    //   method: 'GET'
-    //   }).then(resp => resp.blob())
-    // .then(blob => {
-    //     const url = window.URL.createObjectURL(blob);
-    //     const a = document.createElement('a');
-    //     a.style.display = 'none';
-    //     a.href = url;
-    //     a.download = "name"; // the filename you want
-    //     document.body.appendChild(a);
-    //     a.click();
-    //     window.URL.revokeObjectURL(url);
-    // })
-    this.downloadFiles(fileUrl, 'abc')
-    },
-    downloadFiles(fileURL, fileName) {
-    // for non-IE
-    if (!window.ActiveXObject) {
-        var save = document.createElement('a');
-        save.href = fileURL;
-        save.target = '_blank';
-        var filename = fileURL.substring(fileURL.lastIndexOf('/')+1);
-        save.download = fileName || filename;
-	       if ( navigator.userAgent.toLowerCase().match(/(ipad|iphone|safari)/) && navigator.userAgent.search("Chrome") < 0) {
-				document.location = save.href;
-// window event not working here
-			}else{
-		        var evt = new MouseEvent('click', {
-		            'view': window,
-		            'bubbles': true,
-		            'cancelable': false
-		        });
-		        save.dispatchEvent(evt);
-		        (window.URL || window.webkitURL).revokeObjectURL(save.href);
-			}
+      window.open(this.downloadLinks[index], '_blank')
     }
-
-    // for IE < 11
-    else if ( !! window.ActiveXObject && document.execCommand)     {
-        var _window = window.open(fileURL, '_blank');
-        _window.document.close();
-        _window.document.execCommand('SaveAs', true, fileName || fileURL)
-        _window.close();
-    }
-}
   }
 }
 </script>
