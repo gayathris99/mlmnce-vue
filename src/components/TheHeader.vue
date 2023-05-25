@@ -37,10 +37,11 @@
   <div class="marquee-content">
     <marquee behavior="smooth" direction="" bgcolor="#ffcdd2" class="q-pa-sm" onmouseover="this.stop()" onmouseout="this.start()">
       <div class="row no-wrap">
+        &nbsp;
       <div v-for="(notification, i) in notificationData" :key="i">
-          <div v-if="notification.notificationEntity === 'PLAIN_ALERT'">&nbsp;{{notification.content}}&nbsp;</div>
-          <div v-if="notification.notificationEntity === 'OPEN_LINK'">&nbsp;{{notification.content}} - <a :href="notification.link" target="_blank">Know More</a>&nbsp;</div>
-          <div v-if="notification.notificationEntity === 'ATTACHMENT_DOWNLOAD'">&nbsp;{{notification.content}} - <a :href="notification.documentViewLink" target="_blank">Click here to download</a>&nbsp;</div>
+        <div v-if="notification.notificationEntity === 'PLAIN_ALERT'">&nbsp;{{notification.content}}&nbsp;</div>
+        <div v-if="notification.notificationEntity === 'OPEN_LINK'">&nbsp;{{notification.content}} - <a :href="notification.link" target="_blank">Know More</a>&nbsp;</div>
+        <div v-if="notification.notificationEntity === 'ATTACHMENT_DOWNLOAD'">&nbsp;{{notification.content}} - <a :href="notification.documentViewLink" target="_blank">Click here to download</a>&nbsp;</div>
       </div>
       </div>
     </marquee>
