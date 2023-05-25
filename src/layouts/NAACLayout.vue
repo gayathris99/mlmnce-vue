@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-        <q-separator vertical color="#b6c8d8" v-if="!isMobile" class="q-ml-sm"/>
+        <q-separator vertical color="#b6c8d8" v-if="!isMobile" class="q-ml-sm q-my-md"/>
         <router-view class="col-md-10 col-sm-9 col-xs-12"/>
       </div>
     </q-page-container>

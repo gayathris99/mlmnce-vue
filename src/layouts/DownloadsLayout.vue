@@ -11,7 +11,7 @@
             </div>
           </div>
         </div>
-        <q-separator vertical color="#b6c8d8" v-if="!isMobile" class="q-ml-sm"/>
+        <q-separator vertical color="#b6c8d8" v-if="!isMobile" class="q-ml-sm q-my-md"/>
         <div class="col-md-10 col-sm-9 col-xs-12 q-pa-lg">
           <div v-if="isMobile">
             <q-select outlined  v-model="selectedFolder" map-options emit-value :options="options" />
