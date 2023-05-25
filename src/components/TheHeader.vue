@@ -34,9 +34,17 @@
       </a>
     </div>
   </div>
-  <marquee behavior="smooth" direction="" bgcolor="#ffcdd2" class="q-pa-sm">
-     M.L Manjaiah Setty Narasimha Setty College of Education
-  </marquee>
+  <div class="marquee-content">
+    <marquee behavior="smooth" direction="" bgcolor="#ffcdd2" class="q-pa-sm" onmouseover="this.stop()" onmouseout="this.start()">
+      <div class="row no-wrap">
+      <div v-for="(notification, i) in notificationData" :key="i">
+          <div v-if="notification.notificationEntity === 'PLAIN_ALERT'">&nbsp;{{notification.content}}&nbsp;</div>
+          <div v-if="notification.notificationEntity === 'OPEN_LINK'">&nbsp;{{notification.content}} - <a :href="notification.link" target="_blank">Know More</a>&nbsp;</div>
+          <div v-if="notification.notificationEntity === 'ATTACHMENT_DOWNLOAD'">&nbsp;{{notification.content}} - <a :href="notification.documentViewLink" target="_blank">Click here to download</a>&nbsp;</div>
+      </div>
+      </div>
+    </marquee>
+  </div>
   <div class="row items-center align-center justify-evenly fw-600 menu no-wrap header-component" v-if="!isMobile">
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'home'})" :class="this.$route.name === 'home' ? 'bordered-class' : ''">HOME</div>
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'about'})" :class="this.$route.fullPath.includes('about') ? 'bordered-class' : ''">ABOUT US</div>
@@ -157,14 +165,20 @@
 </template>
 
 <script>
+import axios from 'axios'
+import { mapGetters, mapMutations } from 'vuex'
 export default {
   name: "TheHeader",
   data () {
     return {
-      isDrawer: false
+      isDrawer: false,
+      notificationData: []
     }
   },
   computed: {
+    ...mapGetters({
+      getNotification: 'college/getNotification'
+    }),
     isMobile () {
       return this.$q.screen.lt.sm
     },
@@ -176,6 +190,9 @@ export default {
     }
   },
   methods: {
+    ...mapMutations({
+      setNotificationData: 'college/setNotificationData'
+    }),
     toggleDrawer () {
       this.isDrawer = !this.isDrawer
     },
@@ -184,6 +201,28 @@ export default {
       this.$router.push({
         name: route
       })
+    },
+    async getNotifications () {
+      const { data } = await axios.get('https://6ce6-49-207-229-251.ngrok-free.app/collegewebsite/notifications')
+      // console.log(data)
+      // let notifications = []
+      // data?.forEach(notification => {
+      //   const obj = {}
+      //   const type = notification.notificationEntity
+      //   if (type === 'OPEN_LINK') {
+      //     console.log(notification.content?.slice(0,notification.content.indexOf('$')));
+      //     console.log(notification.content?.slice(notification.content.indexOf('$')+1,notification.content.lastIndexOf('$')));
+      //   }
+      // })
+      this.notificationData = data
+      this.setNotificationData(data)
+    },
+  },
+  mounted () {
+    if (!this.getNotification.length) {
+      this.getNotifications()
+    } else {
+      this.notificationData = this.getNotification
     }
   }
 }
@@ -214,5 +253,13 @@ a {
 }
 :deep(.q-item__section) {
   justify-content: initial;
+}
+marquee {
+
+  a {
+    text-decoration: underline;
+    color: #152141;
+    font-weight: 500;
+  }
 }
 </style>

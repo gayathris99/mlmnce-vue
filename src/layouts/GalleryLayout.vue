@@ -4,8 +4,8 @@
     <q-page-container>
        <div class="q-pa-lg">
         <div style="color:#303a57" class="fw-500 fs-24 q-mb-md">GALLERY</div>
-        <div v-if="galleryData.length">
-          <div v-for="(gallery, key) in galleryData" :key="key" class="row justify-start q-gutter-md align-center items-center">
+        <div v-if="galleryData.length" class="row justify-start q-gutter-md align-center items-center no-wrap">
+          <div v-for="(gallery, key) in galleryData" :key="key" >
             <div class="column cursor-pointer" @click="onShowCarousel(gallery)">
               <div class="container">
                 <img :src="gallery.image" alt="">
@@ -72,11 +72,12 @@ export default {
   },
   methods: {
     async getGalleryDetails () {
-      const { data } = await axios.get('https://platform.foxgloveteam.com/collegewebsite/gallary-details')
+      const { data } = await axios.get('https://6ce6-49-207-229-251.ngrok-free.app/collegewebsite/gallary-details')
       this.galleryData = data
     },
     async onShowCarousel (gallery) {
-      const { data } = await axios.get(`https://platform.foxgloveteam.com/collegewebsite/gallary-details/${gallery.album}`)
+      // https://6ce6-49-207-229-251.ngrok-free.app/collegewebsite/gallary-details
+      const { data } = await axios.get(`https://6ce6-49-207-229-251.ngrok-free.app/collegewebsite/gallary-details/${gallery.album}`)
       this.carouselData = data
       this.showCarousel = true
     }
