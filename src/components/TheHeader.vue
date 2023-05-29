@@ -204,7 +204,7 @@ export default {
       })
     },
     async getNotifications () {
-      const { data } = await axios.get('https://6ce6-49-207-229-251.ngrok-free.app/collegewebsite/notifications')
+      const { data } = await axios.get('https://9e76-49-207-229-251.ngrok-free.app/collegewebsite/notifications')
       // console.log(data)
       // let notifications = []
       // data?.forEach(notification => {

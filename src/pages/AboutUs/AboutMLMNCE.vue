@@ -45,10 +45,14 @@ export default {
 .hero-image {
   img {
   width: 90%;
-  max-height: 450px;
+  height: 50%;
+  object-fit: cover;
+  object-position: bottom;
   @media only screen and (max-width: $breakpoint-sm-max) and (min-width: $breakpoint-sm-min) {
     width: 100%;
-    height: 175px;
+    height: 50%;
+    object-fit: cover;
+  object-position: bottom;
   }
 }
 }

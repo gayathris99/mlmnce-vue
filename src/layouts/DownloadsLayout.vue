@@ -86,7 +86,7 @@ export default {
     async getDownloadDetails () {
       // https://6ce6-49-207-229-251.ngrok-free.app/collegewebsite/download-details
       // https://platform.foxgloveteam.com/collegewebsite/download-details
-      const { data } = await axios.get('https://6ce6-49-207-229-251.ngrok-free.app/collegewebsite/download-details')
+      const { data } = await axios.get('https://9e76-49-207-229-251.ngrok-free.app/collegewebsite/download-details')
       this.downloadDetails = data
       this.selectedFolder = data[0]?.album
       this.getSelectedFolderDetails(data[0]?.album)
@@ -103,7 +103,7 @@ export default {
     },
     async getSelectedFolderDetails (album) {
       this.selectedFolderDetails = []
-      const { data } = await axios.get(`https://6ce6-49-207-229-251.ngrok-free.app/collegewebsite/download-details/${album}`)
+      const { data } = await axios.get(`https://9e76-49-207-229-251.ngrok-free.app/collegewebsite/download-details/${album}`)
       this.selectedFolderDetails = data
     },
     getFileType ({ file }) {

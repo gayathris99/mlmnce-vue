@@ -72,12 +72,12 @@ export default {
   },
   methods: {
     async getGalleryDetails () {
-      const { data } = await axios.get('https://6ce6-49-207-229-251.ngrok-free.app/collegewebsite/gallary-details')
+      const { data } = await axios.get('https://9e76-49-207-229-251.ngrok-free.app/collegewebsite/gallary-details')
       this.galleryData = data
     },
     async onShowCarousel (gallery) {
-      // https://6ce6-49-207-229-251.ngrok-free.app/collegewebsite/gallary-details
-      const { data } = await axios.get(`https://6ce6-49-207-229-251.ngrok-free.app/collegewebsite/gallary-details/${gallery.album}`)
+      // https://9e76-49-207-229-251.ngrok-free.app/collegewebsite/gallary-details
+      const { data } = await axios.get(`https://9e76-49-207-229-251.ngrok-free.app/collegewebsite/gallary-details/${gallery.album}`)
       this.carouselData = data
       this.showCarousel = true
     }

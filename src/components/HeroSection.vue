@@ -99,4 +99,15 @@ a {
     border-radius: 20px;
     background-color: #eadfe0;
 }
+//         .my_bg {
+//             background-image:
+//             linear-gradient(45deg,
+//               rgba(245,70,66, 0.75),
+//               rgba(8,83,156, 0.75)), url(
+// 'https://media.geeksforgeeks.org/wp-content/cdn-uploads/20190710102234/download3.png');
+//             width: 100%;
+//             height: 280px;
+//             text-align: center;
+//               color: #fff;
+//         }
 </style>
