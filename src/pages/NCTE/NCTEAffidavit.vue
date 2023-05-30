@@ -1,11 +1,11 @@
 <template>
   <div class="q-pa-lg">
     <div style="color:#303a57" class="fw-500 fs-24">NCTE AFFIDAVITS</div>
-    <div class="row align-center items-center justify-evenly q-mt-md q-gutter-md">
-        <div class="column">
-          <div class="row justify-end">
+    <div class="row align-center items-center justify-start q-mt-md q-gutter-md">
+        <div class="ncte-affidavit">
+          <div class="row justify-end q-mb-sm q-gutter-x-xs">
             <q-icon name="download" class="cursor-pointer" size="sm" @click="onDownload"></q-icon>
-            <q-icon name="share" class="cursor-pointer" size="sm"  @click="onShare"></q-icon>
+            <q-icon name="open_in_new" class="cursor-pointer" size="sm"  @click="onShare"></q-icon>
           </div>
           <img src="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/affidavit/NCTE-Affidavit.png"  alt="">
         </div>
@@ -33,17 +33,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-img {
-  width: 950px;
+.ncte-affidavit {
+   width: 75%;
   height: 700px;
-  border: 0.5px solid grey;
+  // border: 0.5px solid grey;
     @media only screen and (max-width: $breakpoint-sm-max) {
-      width: 500px;
-      height: 400px;
+      // width: 250px;
+      width: 100%;
     }
     @media only screen and (max-width: $breakpoint-xs-max) {
-      width: 300px;
+      // width: 250px;
+      width: 100%;
       height: 400px;
+    }
+}
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0.5px solid grey;
+    @media only screen and (max-width: $breakpoint-sm-max) {
+      width: 100%;
+      height: auto;
+    }
+    @media only screen and (max-width: $breakpoint-xs-max) {
+      height: auto;
     }
 }
 a {

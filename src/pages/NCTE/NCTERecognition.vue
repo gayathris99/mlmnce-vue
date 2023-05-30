@@ -4,9 +4,9 @@
       <div class="row align-center items-center q-mt-md q-gutter-md" :class="isMobile ? 'justify-center' : 'justify-start'">
         <div v-for="(file, key) in files" :key="key">
           <div class="column">
-            <div class="row justify-end">
+            <div class="row justify-end q-mb-sm q-gutter-x-xs">
               <q-icon name="download" class="cursor-pointer" size="sm" @click="onDownload(file)"></q-icon>
-              <q-icon name="share" class="cursor-pointer" size="sm"  @click="onShare(file.fileLink)"></q-icon>
+              <q-icon name="open_in_new" class="cursor-pointer" size="sm"  @click="onShare(file.fileLink)"></q-icon>
             </div>
             <img :src="file.image"  alt="">
           </div>

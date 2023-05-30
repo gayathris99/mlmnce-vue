@@ -1,20 +1,15 @@
 <template>
-  <div class="q-pa-lg">
+  <div :class="isMobile ? 'q-pa-md' :  'q-pa-lg'">
     <div style="color:#303a57" class="fw-500 fs-24">DEPOSIT BONDS</div>
-    <div class="row align-center items-center justify-evenly q-mt-md q-gutter-md">
-        <div class="column">
-          <div class="row justify-end">
-            <q-icon name="download" class="cursor-pointer" size="sm" @click="onDownload(0)"></q-icon>
-            <q-icon name="share" class="cursor-pointer" size="sm"  @click="onShare(0)"></q-icon>
+    <div class="row align-center items-center q-mt-md q-gutter-md" :class="isMobile ? 'justify-center' :  'justify-start'">
+        <div v-for="(file, key) in links" :key="key">
+          <div class="column">
+            <div class="row justify-end q-mb-sm q-gutter-x-xs">
+              <q-icon name="download" class="cursor-pointer" size="sm" @click="onDownload(key)"></q-icon>
+              <q-icon name="open_in_new" class="cursor-pointer" size="sm"  @click="onShare(key)"></q-icon>
+            </div>
+            <img :src="file"  alt="">
           </div>
-          <img src="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/depositbonds/Deposit-bonds.jpeg"  alt="">
-        </div>
-        <div class="column">
-          <div class="row justify-end">
-            <q-icon name="download" class="cursor-pointer" size="sm" @click="onDownload(1)"></q-icon>
-            <q-icon name="share" class="cursor-pointer" size="sm" @click="onShare(1)"></q-icon>
-          </div>
-          <img src="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/depositbonds/Ncte-Deposits.png"  alt="">
         </div>
     </div>
   </div>
@@ -35,6 +30,11 @@ export default {
       ]
     }
   },
+  computed: {
+    isMobile () {
+        return this.$q.screen.lt.sm
+      }
+  },
   methods: {
     onShare(index) {
       // this.$router.go(this.links[index])
@@ -49,12 +49,20 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  width: 500px;
-  height: 700px;
+  width: 100%;
+  max-height: 600px;
+  height: auto;
   border: 0.5px solid grey;
+    @media only screen and (max-width: $breakpoint-sm-max) {
+      // width: 250px;
+      max-height: 300px;
+      height: auto;
+    }
     @media only screen and (max-width: $breakpoint-xs-max) {
-      width: 250px;
-      height: 400px;
+      // width: 250px;
+      // max-height: 400px;
+      width: 100%;
+      height: auto;
     }
 }
 a {

@@ -4,7 +4,7 @@
     <div class="main-video q-mt-md row justify-center">
       <iframe :src="playerLink" allowfullscreen allow="autoplay" frameBorder="0"/>
     </div>
-    <div class="video-list-container q-pa-md q-mt-lg row items-center justify-evenly align-center wrap q-gutter-md" v-if="youtubeData.length">
+    <div class="video-list-container q-pa-md q-mt-lg row items-center justify-start align-center wrap q-gutter-x-xl q-gutter-y-md" v-if="youtubeData.length">
       <div v-for="(video, key) in youtubeData" :key="key" class="cursor-pointer" @click="playVideo(video.id)">
         <img v-if="isDesktop" :src="video.thumbnail" alt="" width="300" height="180">
         <img v-else :src="video.thumbnail" alt="" width="250" height="180">
@@ -72,8 +72,8 @@ export default {
 
 <style lang="scss" scoped>
 iframe {
-  width: 70vw;
-  height: 500px;
+  width: 80vw;
+  height: 550px;
   @media only screen and (max-width: $breakpoint-sm-max) {
     height: 300px;
   }
