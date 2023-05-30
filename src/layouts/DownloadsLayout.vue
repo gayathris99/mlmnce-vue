@@ -22,7 +22,7 @@
               <a :href="folder.file" target="_blank">
               <div class="col-2  column items-center">
                 <img :src="getFileType(folder)" alt="">
-                <div class="fs-12 q-mt-md">{{folder.title}} &nbsp;</div>
+                <div class="fs-12 q-mt-md doc-title text-center">{{folder.title}} &nbsp;</div>
               </div>
               </a>
             </div>
@@ -143,5 +143,8 @@ img {
 a {
   text-decoration: none;
   color: $dark;
+}
+.doc-title {
+  max-width: 100px;
 }
 </style>

@@ -5,7 +5,7 @@
       <a href="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/aqar/AQAR+2016.pdf" target="_blank">
       <div class="col-2  column items-center ">
         <img src="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/helper-images/PdfLogo.png" alt="">
-        <div class="fs-12 q-mt-md">AQAR 2016-17</div>
+        <div class="fs-12 q-mt-md doc-title text-center">AQAR 2016-17</div>
       </div>
       </a>
     </div>
@@ -26,5 +26,8 @@ img {
 a {
   text-decoration: none;
   color: $dark;
+}
+.doc-title {
+  max-width: 100px;
 }
 </style>
