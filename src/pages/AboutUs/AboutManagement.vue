@@ -4,7 +4,7 @@
     <div class="row justify-center align-center items-center q-mt-md hero-image">
       <img src=" https://i.ibb.co/xLbWj2f/MES-ADMINISTRATIVE-GROUP-PHOTO.png" alt="MLMNCE">
     </div>
-    <div class="team-members row items-start  align-center  q-gutter-y-lg wrap q-my-md" :class="isDesktop ? 'justify-start' : 'justify-center'">
+    <div class="team-members row items-start  align-center  q-gutter-y-lg wrap q-my-md justify-start" >
       <div class=" col-md-3 col-sm-4 col-xs-6 align-center  justify-start">
         <img src="https://i.ibb.co/ZgTQztz/Keshava-Murthy.jpg" alt="MLMNCE">
         <div class="fs-16 fw-500">Sri N Keshava Murthy</div>
@@ -37,7 +37,7 @@
       </div>
     </div>
      <div class="q-mt-xl fw-600 fs-20" style="color:#303a57">EC MEMBERS</div>
-    <div class="team-members row items-start align-center  q-gutter-y-lg wrap q-my-sm" :class="isDesktop ? 'justify-start' : 'justify-center'">
+    <div class="team-members row items-start align-center  q-gutter-y-lg wrap q-my-sm justify-start">
       <div class=" col-md-3 col-sm-4 col-xs-6 align-center  justify-start">
         <img src="https://i.ibb.co/z6LbW7q/Raje-Gowda.jpg" alt="MLMNCE">
         <div class="fs-16 fw-500">Sri T.D Raje Gowda</div>
@@ -88,20 +88,57 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+// .hero-image {
+//   img {
+//   width: 100%;
+//   max-height: 400px;
+//   @media only screen and (max-width: $breakpoint-sm-max) {
+//     width: 100%;
+//     height: 300px;
+//     object-fit: cover;
+//   object-position: center;
+//   }
+// }
+// }
+.hero-image{
+     width: 90%;
+  // height: 500px;
+  // border: 0.5px solid grey;
+    @media only screen and (max-width: $breakpoint-sm-max) {
+      // width: 250px;
+      width: 100%;
+      //  height: 200px;
+    }
+    @media only screen and (max-width: $breakpoint-xs-max) {
+      // width: 250px;
+      width: 100%;
+      // height: 200px;
+    }
+}
 .hero-image {
   img {
-  width: 90%;
-  max-height: 400px;
-  @media only screen and (max-width: $breakpoint-sm-max) and (min-width: $breakpoint-sm-min) {
-    width: 100%;
-    height: 175px;
+  max-width: 100%;
+  height: auto;
+  border: 0.5px solid grey;
+  display: row;
+  justify-content: center;
+    @media only screen and (max-width: $breakpoint-sm-max) {
+      width: 100%;
+      height: auto;
+    }
+    @media only screen and (max-width: $breakpoint-xs-max) {
+      height: auto;
+    }
   }
-}
 }
 .team-members {
   img {
     width: 120px;
     height: 120px;
+    @media only screen and (max-width: $breakpoint-xs-max) {
+          width: 100px;
+    height: 100px;
+    }
   }
 }
 

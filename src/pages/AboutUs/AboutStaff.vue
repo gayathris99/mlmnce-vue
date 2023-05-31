@@ -3,8 +3,8 @@
     <div style="color:#303a57" class="fw-500 fs-24">STAFF</div>
     <div class="column justify-center align-center items-center q-mt-md hero-image">
       <img src="https://i.ibb.co/nk8C5Cf/Staff-Group-Photo.jpg" alt="MLMNCE">
-      <small class="text-center q-mt-sm">MES M.L.M.N B.Ed College Teaching Staff</small>
     </div>
+    <small class="text-center q-mt-sm column justify-center align-center items-center">MES M.L.M.N B.Ed College Teaching Staff</small>
     <div class="q-mt-xl fw-600 fs-24" style="color:#303a57">TEACHING FACULTY</div>
     <div class="team-members row items-start  align-center  q-gutter-y-xl q-gutter-x-xs wrap q-mb-md q-mt-sm" :class="isDesktop ? 'justify-start' : 'justify-center'">
       <div class="col-md-2 col-sm-4 col-xs-5 align-center  justify-start" v-for="(teacher, key) in teachingStaff" :key="key">
@@ -78,10 +78,33 @@ export default {
 
 <style lang="scss" scoped>
 .hero-image{
-img {
-  width: 85%;
-  max-height: 450px;
+     width: 100%;
+  // height: 500px;
+  // border: 0.5px solid grey;
+    @media only screen and (max-width: $breakpoint-sm-max) {
+      // width: 250px;
+      width: 100%;
+      //  height: 200px;
+    }
+    @media only screen and (max-width: $breakpoint-xs-max) {
+      // width: 250px;
+      width: 100%;
+      // height: 200px;
+    }
 }
+.hero-image {
+  img {
+  max-width: 100%;
+  height: auto;
+  border: 0.5px solid grey;
+    @media only screen and (max-width: $breakpoint-sm-max) {
+      width: 100%;
+      height: auto;
+    }
+    @media only screen and (max-width: $breakpoint-xs-max) {
+      height: auto;
+    }
+  }
 }
 .team-members {
   img {

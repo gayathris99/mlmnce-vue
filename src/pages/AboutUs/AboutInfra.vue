@@ -4,7 +4,7 @@
     <div class="q-mt-md fs-16">
       The College has highly qualified staff, Good library, Reading room, Book-bank, Psychology lab, Computer cum Language lab and a variety of audio-visual equipments, attached demonstration High School, provision for varied co-curricular activities, Hostel facilities for the lady students in the college premises itself and all the facilities required for a College of Education. We have the tradition of honouring meritorious students every year. The College has secured many ranks and consistently securing 100 percent result in the University Examinations and has been considered as one of the outstanding Colleges of Education in Karnataka.
     </div>
-    <div class="infra-images q-mt-md row justify-evenly align-center items-center q-gutter-x-sm q-gutter-y-lg">
+    <div class="infra-images q-mt-md row justify-start align-center items-center q-gutter-x-sm q-gutter-y-lg">
       <div class="col-md-4 col-xs-12 col-sm-4 items-center column">
         <div class="q-my-sm fs-12">Chemistry Lab</div>
         <img src="https://i.ibb.co/cLYBzZ4/Chemistry.jpg" alt="MLMNCE">
@@ -53,10 +53,10 @@ export default {
 
 <style lang="scss" scoped>
 img {
-  width: 100%;
-  height: 300px;
+  width: 90%;
+  height: 250px;
   @media only screen and (max-width: $breakpoint-sm-max) and (min-width: $breakpoint-sm-min) {
-    width: 100%;
+    width: 90%;
     height: 175px;
   }
 }
