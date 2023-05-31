@@ -1,6 +1,8 @@
 <template>
-  <q-layout>
-    <the-header/>
+  <q-layout view="lHh lpr lFf">
+    <q-header>
+      <the-header/>
+    </q-header>
     <q-page-container>
        <div class="q-pa-lg">
         <div style="color:#303a57" class="fw-500 fs-24 q-mb-md">GALLERY</div>

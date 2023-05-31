@@ -1,6 +1,8 @@
 <template>
-  <q-layout>
-    <the-header/>
+  <q-layout view="lHh lpr lFf">
+    <q-header>
+      <the-header/>
+    </q-header>
     <q-page-container class="content">
       <div class="row align-center no-wrap">
         <div class="col-md-2 col-sm-3 q-py-md q-pl-md" v-if="!isMobile">
@@ -39,7 +41,10 @@
           </div>
         </div>
         <q-separator vertical color="#b6c8d8" v-if="!isMobile" class="q-ml-sm q-my-md"/>
-        <router-view class="col-md-10 col-sm-9 col-xs-12"/>
+        <!-- <router-view class="col-md-10 col-sm-9 col-xs-12"/> -->
+        <q-scroll-area class="col-md-10 col-sm-9 col-xs-12" style="height: 100vh">
+            <router-view />
+        </q-scroll-area>
       </div>
     </q-page-container>
     <the-footer class="footer"/>

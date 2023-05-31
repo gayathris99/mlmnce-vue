@@ -1,6 +1,8 @@
 <template>
-  <q-layout>
-    <the-header/>
+  <q-layout view="lHh lpr lFf">
+    <q-header>
+      <the-header/>
+    </q-header>
     <q-page-container class="content">
       <div class="row align-center no-wrap">
         <div class="col-md-2 col-sm-3 q-py-md q-pl-md" v-if="!isMobile">
@@ -12,7 +14,8 @@
           </div>
         </div>
         <q-separator vertical color="#b6c8d8" v-if="!isMobile" class="q-ml-sm q-my-md"/>
-        <div class="col-md-10 col-sm-9 col-xs-12 q-pa-lg">
+       <q-scroll-area class="col-md-10 col-sm-9 col-xs-12" style="height: 100vh">
+         <div class="q-pa-lg">
           <div v-if="isMobile">
             <q-select outlined  v-model="selectedFolder" map-options emit-value :options="options" />
           </div>
@@ -28,6 +31,7 @@
             </div>
           </div>
         </div>
+       </q-scroll-area>
       </div>
     </q-page-container>
     <the-footer class="footer"/>
