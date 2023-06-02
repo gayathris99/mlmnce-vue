@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md">
-    <div style="color:#303a57" class="fw-500 fs-24">AFFILIATION ORDER</div>
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">AFFILIATION ORDER</div>
     <div class="row  align-center items-center q-mt-md">
       <img src="https://i.ibb.co/x58TFVq/Affiliation-Order.png" alt="MLMNCE">
     </div>

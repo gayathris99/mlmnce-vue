@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-lg">
-    <div style="color:#303a57" class="fw-500 fs-24">BEST PRACTICES</div>
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">BEST PRACTICES</div>
     <div class="row align-center items-center justify-start q-mt-md q-gutter-md">
       <div v-for="(bestPractice, key) in bestPractices" :key="key">
         <a :href="bestPractice.link" target="_blank">

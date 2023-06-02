@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-lg">
-    <div style="color:#303a57" class="fw-500 fs-24">STUDENT SATISFACTION SURVEY</div>
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">STUDENT SATISFACTION SURVEY</div>
     <div class="row align-center items-center justify-start q-mt-md q-gutter-md">
       <a href="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/studentsurvey/SSS++2017-18.pdf" target="_blank">
       <div class="col-2  column items-center ">

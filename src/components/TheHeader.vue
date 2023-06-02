@@ -1,20 +1,20 @@
 <template>
 <div >
-  <div class="row items-center align-center no-wrap q-pa-md justify-evenly">
+  <div class="row items-center align-center no-wrap q-pa-md" :class="isMobile ? 'justify-start' : 'justify-around'">
     <div class="row-items row  items-center no-wrap  cursor-pointer">
       <div v-if="isMobile">
         <q-icon name="menu" size="sm" class="cursor-pointer q-pr-sm" @click="toggleDrawer"/>
       </div>
       <img src="~assets/Logo.svg" alt="MESMLMNCE LOGO" :width="isMobile ? 40: 75" @click="this.$router.push({name: 'home'})">
 
-      <div class="q-px-md" @click="this.$router.push({name: 'home'})">
-        <small class="fw-700">
+      <div class="q-px-md font-roboto" @click="this.$router.push({name: 'home'})">
+        <div class="fs-13 fw-400">
           Malnad Education Society &#174;
-        </small>
-        <div class=" fw-500" :class="!isMobile ? 'fs-18' : 'fs-12'">
+        </div>
+        <div class="fw-400" :class="!isMobile ? 'fs-20' : 'fs-13'">
           M.L Manjaiah Setty Narasimha Setty
         </div>
-        <div class="fw-500" :class="!isMobile ? 'fs-20' : 'fs-14'">College of Teacher Education</div>
+        <div class="fw-400" :class="!isMobile ? 'fs-28' : 'fs-14'">College of Teacher Education</div>
       </div>
 
 
@@ -34,7 +34,7 @@
       </a>
     </div>
   </div>
-  <div class="marquee-content">
+  <div class="marquee-content font-roboto fs-15">
     <marquee behavior="smooth" direction="" bgcolor="#ffcdd2" class="q-pa-sm" onmouseover="this.stop()" onmouseout="this.start()">
       <div class="row no-wrap">
         &nbsp;
@@ -46,7 +46,7 @@
       </div>
     </marquee>
   </div>
-  <div class="row items-center align-center justify-evenly fw-600 menu no-wrap header-component" v-if="!isMobile">
+  <div class="row items-center align-center justify-evenly fw-600 menu no-wrap header-component font-roboto q-pb-sm" v-if="!isMobile">
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'home'})" :class="this.$route.name === 'home' ? 'bordered-class' : ''">HOME</div>
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'about'})" :class="this.$route.fullPath.includes('about') ? 'bordered-class' : ''">ABOUT US</div>
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'library'})" :class="this.$route.fullPath.includes('academia') ? 'bordered-class' : ''">ACADEMIA</div>
@@ -79,11 +79,11 @@
       group="somegroup"
       dense
       >
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('about')">ABOUT MLMNCE</div>
-        <div class="q-py-sm cursor-pointer fs-12"  @click="goTo('management')">Management</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('infra')">Staff</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('toppers')">Toppers</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('infra')">Infrastructure</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('about')">ABOUT MLMNCE</div>
+        <div class="q-py-sm cursor-pointer fs-13"  @click="goTo('management')">Management</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('infra')">Staff</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('toppers')">Toppers</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('infra')">Infrastructure</div>
       </q-expansion-item>
     </div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">
@@ -93,12 +93,12 @@
       group="somegroup"
       dense
       >
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('library')">Library</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('affiliation-order')">Affiliation Order</div>
-        <div class="q-py-sm cursor-pointer fs-12 " @click="goTo('student-community')">Student Community</div>
-        <!-- <div class="q-py-sm cursor-pointer fs-12" @click="goTo('admissions')">Admissions</div> -->
-        <!-- <div class="q-py-sm cursor-pointer fs-12" @click="goTo('course-structure')">Course Structure</div> -->
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('syllabus')">Syllabus</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('library')">Library</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('affiliation-order')">Affiliation Order</div>
+        <div class="q-py-sm cursor-pointer fs-13 " @click="goTo('student-community')">Student Community</div>
+        <!-- <div class="q-py-sm cursor-pointer fs-13" @click="goTo('admissions')">Admissions</div> -->
+        <!-- <div class="q-py-sm cursor-pointer fs-13" @click="goTo('course-structure')">Course Structure</div> -->
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('syllabus')">Syllabus</div>
       </q-expansion-item>
     </div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">
@@ -108,14 +108,14 @@
       group="somegroup"
       dense
       >
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('naac-certificate')">NAAC Certificate</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('academic-plan')">Annual Academic Plan</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('iqac-reports')">IQAC Reports</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('iqac-compositions')">IQAC Compositions</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('aqar')">AQAR</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('best-practices')">Best Practices</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('student-survey')">Student Satisfaction Survey</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="goTo('others')">Others</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('naac-certificate')">NAAC Certificate</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('academic-plan')">Annual Academic Plan</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('iqac-reports')">IQAC Reports</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('iqac-compositions')">IQAC Compositions</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('aqar')">AQAR</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('best-practices')">Best Practices</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('student-survey')">Student Satisfaction Survey</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('others')">Others</div>
       </q-expansion-item>
     </div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">
@@ -125,11 +125,11 @@
       group="somegroup"
       dense
       >
-        <div class="q-py-sm cursor-pointer fs-12" @click="this.$router.push({name: 'ncte-recognition'})">NCTE - Recognition</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="this.$router.push({name: 'ncte-affidavit'})">NCTE Affidavit</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="this.$router.push({name: 'deposit-bonds'})">Deposit Bonds</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="this.$router.push({name: 'audit-reports'})">Audit Reports</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="this.$router.push({name: 'mandatory-disclosure'})">Mandatory Disclosure</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="this.$router.push({name: 'ncte-recognition'})">NCTE - Recognition</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="this.$router.push({name: 'ncte-affidavit'})">NCTE Affidavit</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="this.$router.push({name: 'deposit-bonds'})">Deposit Bonds</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="this.$router.push({name: 'audit-reports'})">Audit Reports</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="this.$router.push({name: 'mandatory-disclosure'})">Mandatory Disclosure</div>
       </q-expansion-item>
     </div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">
@@ -139,8 +139,8 @@
       group="somegroup"
       dense
       >
-        <div class="q-py-sm cursor-pointer fs-12" @click="this.$router.push({name: 'facebook'})">Facebook</div>
-        <div class="q-py-sm cursor-pointer fs-12" @click="this.$router.push({name: 'youtube'})">Youtube</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="this.$router.push({name: 'facebook'})">Facebook</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="this.$router.push({name: 'youtube'})">Youtube</div>
       </q-expansion-item>
     </div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16"  @click="this.$router.push({name: 'downloads'})">DOWNLOADS</div>
@@ -204,17 +204,7 @@ export default {
       })
     },
     async getNotifications () {
-      const { data } = await axios.get('https://9e76-49-207-229-251.ngrok-free.app/collegewebsite/notifications')
-      // console.log(data)
-      // let notifications = []
-      // data?.forEach(notification => {
-      //   const obj = {}
-      //   const type = notification.notificationEntity
-      //   if (type === 'OPEN_LINK') {
-      //     console.log(notification.content?.slice(0,notification.content.indexOf('$')));
-      //     console.log(notification.content?.slice(notification.content.indexOf('$')+1,notification.content.lastIndexOf('$')));
-      //   }
-      // })
+      const { data } = await axios.get('https://104c-49-207-219-140.ngrok-free.app/collegewebsite/notifications')
       this.notificationData = data
       this.setNotificationData(data)
     },
@@ -262,5 +252,8 @@ marquee {
     color: #152141;
     font-weight: 500;
   }
+}
+.header-component {
+  color: #47536e;
 }
 </style>

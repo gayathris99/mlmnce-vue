@@ -1,6 +1,6 @@
 <template>
   <div :class="isMobile ? 'q-pa-md' :  'q-pa-lg'">
-    <div style="color:#303a57" class="fw-500 fs-24">DEPOSIT BONDS</div>
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">DEPOSIT BONDS</div>
     <div class="row align-center items-center q-mt-md q-gutter-md" :class="isMobile ? 'justify-center' :  'justify-start'">
         <div v-for="(file, key) in links" :key="key">
           <div class="column">

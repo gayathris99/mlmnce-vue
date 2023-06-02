@@ -7,7 +7,7 @@
     <q-page-container class="content">
       <div class="row align-center no-wrap">
         <div class="col-md-2 col-sm-3 q-py-md q-pl-md" v-if="!isMobile">
-          <div class="fs-20 text-color-blue q-mt-md">ABOUT US</div>
+          <div class="fs-24 text-color-blue q-mt-md"> ABOUT US</div>
           <div class="column q-gutter-md q-mb-lg q-mt-sm">
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'about' ? 'text-highlight': ''" @click="this.$router.push({name: 'about'})">About MLMNCE</div>
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'management' ? 'text-highlight': ''" @click="this.$router.push({name: 'management'})">Management</div>
@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-        <q-separator vertical color="#b6c8d8" v-if="!isMobile" class="q-ml-sm q-my-md"/>
+        <q-separator vertical color="#b6c8d8" v-if="!isMobile" class=" q-my-md"/>
         <!-- <router-view class="col-md-10 col-sm-9 col-xs-12"/> -->
         <q-scroll-area class="col-md-10 col-sm-9 col-xs-12" style="height: 100vh">
             <router-view />
@@ -71,12 +71,15 @@ export default {
 }
 a {
   text-decoration: none;
-  color: $dark;
+  color: inherit;
 }
 .content {
   min-height: calc(100vh - 70px);
 }
 .footer {
   height: 50px;
+}
+.important-links {
+  color: #151F7C;
 }
 </style>

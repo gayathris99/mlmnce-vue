@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md">
-    <div style="color:#303a57" class="fw-500 fs-24 q-mb-md">NAAC CERTIFICATE</div>
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto q-mb-md">NAAC CERTIFICATE</div>
     <div class="ncte-certificate">
       <div class="row justify-end q-mb-sm q-gutter-x-sm">
         <q-icon name="download" class="cursor-pointer" size="sm" @click="onDownload"></q-icon>

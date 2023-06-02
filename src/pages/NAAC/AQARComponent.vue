@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-lg">
-    <div style="color:#303a57" class="fw-500 fs-24">AQAR</div>
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">AQAR</div>
     <div class="row align-center items-center justify-start q-mt-md q-gutter-md">
       <a href="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/aqar/AQAR+2016.pdf" target="_blank">
       <div class="col-2  column items-center ">

@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-lg">
-    <div style="color:#303a57" class="fw-500 fs-24">STUDENT COMMUNITY</div>
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">STUDENT COMMUNITY</div>
     <div class="row align-center items-center justify-start q-mt-md q-gutter-md">
       <a href="https://drive.google.com/file/d/1oJPJJOplUyMHViR0quvr4snpnDXg3Ia_/view" target="_blank">
         <div class="col-2  column items-center ">

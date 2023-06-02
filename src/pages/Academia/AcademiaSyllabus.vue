@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-lg">
-    <div style="color:#303a57" class="fw-500 fs-24">SYLLABUS</div>
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">SYLLABUS</div>
     <div class="row align-center items-center justify-start q-mt-md q-gutter-md">
       <a href="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/syllabus/B.Ed.%2C+Syllabus+2022-23.pdf" target="_blank">
         <div class="col-4 column items-center ">

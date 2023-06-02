@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-lg">
-    <div style="color:#303a57" class="fw-500 fs-24">IQAC COMPOSITIONS</div>
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">IQAC COMPOSITIONS</div>
     <div class="row align-center items-center justify-start q-mt-md q-gutter-md">
       <div v-for="(composition, key) in compositions" :key="key">
         <a :href="composition.link" target="_blank">

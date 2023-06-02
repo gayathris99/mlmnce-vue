@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-lg">
-    <div style="color:#303a57" class="fw-500 fs-24">INFRASTRUCTURE</div>
-    <div class="q-mt-md fs-16">
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">INFRASTRUCTURE</div>
+    <div class="q-mt-md fs-14 font-montserrat text-justify fw-500">
       The College has highly qualified staff, Good library, Reading room, Book-bank, Psychology lab, Computer cum Language lab and a variety of audio-visual equipments, attached demonstration High School, provision for varied co-curricular activities, Hostel facilities for the lady students in the college premises itself and all the facilities required for a College of Education. We have the tradition of honouring meritorious students every year. The College has secured many ranks and consistently securing 100 percent result in the University Examinations and has been considered as one of the outstanding Colleges of Education in Karnataka.
     </div>
     <div class="infra-images q-mt-md row justify-start align-center items-center q-gutter-x-sm q-gutter-y-lg">

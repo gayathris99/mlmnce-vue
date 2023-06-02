@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-lg">
-    <div style="color:#303a57" class="fw-500 fs-24">NCTE AFFIDAVITS</div>
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">NCTE AFFIDAVITS</div>
     <div class="row align-center items-center justify-start q-mt-md q-gutter-md">
         <div class="ncte-affidavit">
           <div class="row justify-end q-mb-sm q-gutter-x-xs">

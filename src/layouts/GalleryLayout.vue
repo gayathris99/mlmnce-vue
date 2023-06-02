@@ -5,7 +5,7 @@
     </q-header>
     <q-page-container>
        <div class="q-pa-lg">
-        <div style="color:#303a57" class="fw-500 fs-24 q-mb-md">GALLERY</div>
+        <div style="color:#303a57" class="fw-500 fs-30 font-roboto q-mb-md">GALLERY</div>
         <div v-if="galleryData.length" class="row justify-start q-gutter-md align-center items-center no-wrap">
           <div v-for="(gallery, key) in galleryData" :key="key" >
             <div class="column cursor-pointer" @click="onShowCarousel(gallery)">
@@ -74,12 +74,12 @@ export default {
   },
   methods: {
     async getGalleryDetails () {
-      const { data } = await axios.get('https://9e76-49-207-229-251.ngrok-free.app/collegewebsite/gallary-details')
+      const { data } = await axios.get('https://104c-49-207-219-140.ngrok-free.app/collegewebsite/gallary-details')
       this.galleryData = data
     },
     async onShowCarousel (gallery) {
-      // https://9e76-49-207-229-251.ngrok-free.app/collegewebsite/gallary-details
-      const { data } = await axios.get(`https://9e76-49-207-229-251.ngrok-free.app/collegewebsite/gallary-details/${gallery.album}`)
+      // https://104c-49-207-219-140.ngrok-free.app/collegewebsite/gallary-details
+      const { data } = await axios.get(`https://104c-49-207-219-140.ngrok-free.app/collegewebsite/gallary-details/${gallery.album}`)
       this.carouselData = data
       this.showCarousel = true
     }

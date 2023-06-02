@@ -1,7 +1,7 @@
 <template>
   <div class="q-pa-lg">
-    <div style="color:#303a57" class="fw-500 fs-24">TOPPERS</div>
-    <div class="column justify-center align-center items-center q-mt-md hero-image">
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">TOPPERS</div>
+    <div class="column  q-mt-md hero-image" :class="isDesktop ? 'justify-start' : 'justify-center'">
       <img src="https://i.ibb.co/sWDRFzY/Rank-holders-2020-21-compressed-2.jpg" alt="MLMNCE">
       <small class="text-center q-mt-sm">Rank Toppers of Batch 2020-21</small>
     </div>
@@ -10,7 +10,12 @@
 
 <script>
 export default {
-  name: 'AboutToppers'
+  name: 'AboutToppers',
+  computed: {
+    isDesktop () {
+      return this.$q.screen.gt.md
+    },
+  }
 }
 </script>
 
@@ -37,12 +42,13 @@ export default {
 }
 .hero-image {
   img {
-  max-width: 100%;
+  max-width: 90%;
   height: auto;
   max-height: 600px;
   border: 0.5px solid grey;
     @media only screen and (max-width: $breakpoint-sm-max) {
       width: 100%;
+      max-width: 100%;
       height: auto;
     }
     @media only screen and (max-width: $breakpoint-xs-max) {

@@ -1,6 +1,6 @@
 <template>
-  <div class="q-pa-lg">
-    <div style="color:#303a57" class="fw-500 fs-24">YOUTUBE EVENT UPDATES</div>
+  <div class="q-pa-md">
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">YOUTUBE EVENT UPDATES</div>
     <div class="main-video q-mt-md row justify-center">
       <iframe :src="playerLink" allowfullscreen allow="autoplay" frameBorder="0"/>
     </div>
@@ -71,15 +71,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.main-video {
 iframe {
   width: 80vw;
   height: 550px;
   @media only screen and (max-width: $breakpoint-sm-max) {
     height: 300px;
+    width: 100%;
   }
   @media only screen and (max-width: $breakpoint-xs-max) {
     height: 250px;
-    width: 100vw;
+    width: 100%;
   }
+}
 }
 </style>

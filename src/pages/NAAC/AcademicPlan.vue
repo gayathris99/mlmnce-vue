@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-lg">
-    <div style="color:#303a57" class="fw-500 fs-24">ANNUAL ACADEMIC PLAN</div>
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">ANNUAL ACADEMIC PLAN</div>
     <div class="row align-center items-center justify-start q-mt-md q-gutter-md">
       <div v-for="(plan, key) in plans" :key="key">
         <a :href="plan.link" target="_blank">

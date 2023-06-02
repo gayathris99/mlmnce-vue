@@ -6,14 +6,14 @@
     <q-page-container class="content">
       <div class="row align-center no-wrap">
         <div class="col-md-2 col-sm-3 q-py-md q-pl-md" v-if="!isMobile">
-          <div class="fs-20 text-color-blue q-mt-md">FOLDERS</div>
+          <div class="fs-24 text-color-blue q-mt-md">FOLDERS</div>
           <div class="column q-gutter-md q-mb-lg q-mt-sm" v-if="downloadDetails?.length">
             <div v-for="(downloadDetail,key) in downloadDetails" :key="key">
               <div class="fs-14 fw-500 cursor-pointer" :class="selectedFolder === downloadDetail?.album ? 'text-highlight' : ''" @click="selectFolder(downloadDetail)">{{downloadDetail?.album}}</div>
             </div>
           </div>
         </div>
-        <q-separator vertical color="#b6c8d8" v-if="!isMobile" class="q-ml-sm q-my-md"/>
+        <q-separator vertical color="#b6c8d8" v-if="!isMobile" class="q-my-md"/>
        <q-scroll-area class="col-md-10 col-sm-9 col-xs-12" style="height: 100vh">
          <div class="q-pa-lg">
           <div v-if="isMobile">
@@ -90,7 +90,7 @@ export default {
     async getDownloadDetails () {
       // https://6ce6-49-207-229-251.ngrok-free.app/collegewebsite/download-details
       // https://platform.foxgloveteam.com/collegewebsite/download-details
-      const { data } = await axios.get('https://9e76-49-207-229-251.ngrok-free.app/collegewebsite/download-details')
+      const { data } = await axios.get('https://104c-49-207-219-140.ngrok-free.app/collegewebsite/download-details')
       this.downloadDetails = data
       this.selectedFolder = data[0]?.album
       this.getSelectedFolderDetails(data[0]?.album)
@@ -107,7 +107,7 @@ export default {
     },
     async getSelectedFolderDetails (album) {
       this.selectedFolderDetails = []
-      const { data } = await axios.get(`https://9e76-49-207-229-251.ngrok-free.app/collegewebsite/download-details/${album}`)
+      const { data } = await axios.get(`https://104c-49-207-219-140.ngrok-free.app/collegewebsite/download-details/${album}`)
       this.selectedFolderDetails = data
     },
     getFileType ({ file }) {
