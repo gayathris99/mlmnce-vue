@@ -1,6 +1,6 @@
 <template>
   <div class="q-pa-md">
-    <div style="color:#303a57" class="fw-500 fs-30 font-roboto">YOUTUBE EVENT UPDATES</div>
+    <div style="color:#303a57" class="fw-500 fs-30 font-roboto" id="video">YOUTUBE EVENT UPDATES</div>
     <div class="main-video q-mt-md row justify-center">
       <iframe :src="playerLink" allowfullscreen allow="autoplay" frameBorder="0"/>
     </div>
@@ -55,7 +55,11 @@ export default {
       })
     },
     playVideo (id) {
-      window.scrollTo({top: 0, behavior: 'smooth'});
+      // window.scrollTo({top: 0, behavior: 'smooth'});
+      document.getElementById('video').scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
       this.playerLink =  `https://www.youtube.com/embed/${id}?autoplay=1&mute=0&controls=1`
     }
   },
