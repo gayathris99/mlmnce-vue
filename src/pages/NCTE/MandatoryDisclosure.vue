@@ -2,13 +2,13 @@
   <div class="q-pa-lg">
     <div style="color:#303a57" class="fw-500 fs-30 font-roboto">MANDATORY DISCLOSURE</div>
     <div class="row align-center items-center justify-start q-mt-md q-gutter-md">
-      <div v-for="(auditReport, key) in auditReports" :key="key">
-        <a :href="auditReport.link" target="_blank">
+      <div v-for="(disclosure, key) in disclosures" :key="key">
+        <router-link :to="{ name: 'files', params: { fileName: disclosure.fileName },}" target="_blank">
         <div class="col-2  column items-center ">
           <img src="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/helper-images/PdfLogo.png" alt="">
-          <div class="fs-12 q-mt-md doc-title text-center">{{auditReport.name}}</div>
+          <div class="fs-12 q-mt-md doc-title text-center">{{disclosure.name}}</div>
         </div>
-        </a>
+        </router-link>
       </div>
     </div>
   </div>
@@ -16,11 +16,11 @@
 
 <script>
 export default {
-  name: 'AuditReports',
+  name: 'MandatoryDisclosures',
   data () {
     return {
-      auditReports: [
-        {link: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/mandatorydisclosure/NCTE+Mandatory+Disclosure+formate.pdf', name: 'Mandatory Disclosure'},
+      disclosures: [
+        {link: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/mandatorydisclosure/NCTE+Mandatory+Disclosure+formate.pdf', name: 'Mandatory Disclosure', fileName: 'Mandatory-Disclosure'},
       ]
     }
   }

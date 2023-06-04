@@ -34,7 +34,7 @@
       </a>
     </div>
   </div>
-  <div class="marquee-content font-roboto fs-15">
+  <div class="marquee-content font-roboto fs-15" v-if="notificationData?.length">
     <marquee behavior="smooth" direction="" bgcolor="#ffcdd2" class="q-pa-sm" onmouseover="this.stop()" onmouseout="this.start()">
       <div class="row no-wrap">
         &nbsp;

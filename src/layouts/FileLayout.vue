@@ -66,7 +66,27 @@ export default {
         'SSS-2020-21': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/studentsurvey/SSS+2020-21.pdf',
 
         'Self-Declaration': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/others/Self+Declaration.pdf',
-        'Undertaking': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/others/undertaking.pdf'
+        'Undertaking': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/others/undertaking.pdf',
+
+        'NCTE-Recognition': 'https://i.ibb.co/2WCdD8g/NCTE-Recognition.png',
+        'NCTE-AOS00330-B-Ed': 'https://i.ibb.co/Z11498Z/NCTE-AOS00330-B-Ed.jpg',
+        'New-NCTE-Recognition': 'https://i.ibb.co/3fZj038/New-NCTE-Recognition.jpg',
+
+        'Deposit-Bonds': 'https://i.ibb.co/Wg8pRMp/Deposit-Bonds.jpg',
+        'NCTE-Deposits': 'https://i.ibb.co/QfwcwBT/Ncte-Deposits.png',
+
+        'Audit-Report-2019-20': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/auditreports/Audit+Report+2019-20.pdf',
+        'Audit-Report-2020-21': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/auditreports/Audit+report+2020-21.pdf',
+
+        'Mandatory-Disclosure': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/mandatorydisclosure/NCTE+Mandatory+Disclosure+formate.pdf',
+
+        'Students-List-2019-20': 'https://drive.google.com/file/d/1oJPJJOplUyMHViR0quvr4snpnDXg3Ia_/preview',
+        'Students-List-2020-21': 'https://drive.google.com/file/d/1XZ7pEDgNmwx1JoEKESchrmYRQ2dvLq9F/preview',
+
+        'BEd-2022-23': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/syllabus/B.Ed.%2C+Syllabus+2022-23.pdf',
+        '2nd-Year-BEd-2022-23': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/syllabus/2+Year+B.Ed+Syllabus+(Final+Print).pdf',
+        'PLO-and-CLO': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/syllabus/PLO.pdf',
+
       },
     }
   },

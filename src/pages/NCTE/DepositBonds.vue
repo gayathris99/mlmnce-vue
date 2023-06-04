@@ -6,9 +6,11 @@
           <div class="column">
             <div class="row justify-end q-mb-sm q-gutter-x-xs">
               <q-icon name="download" class="cursor-pointer" size="sm" @click="onDownload(key)"></q-icon>
-              <q-icon name="open_in_new" class="cursor-pointer" size="sm"  @click="onShare(key)"></q-icon>
+              <router-link :to="{ name: 'files', params: { fileName: file.fileName },}" target="_blank">
+                <q-icon name="open_in_new" class="cursor-pointer" size="sm"></q-icon>
+              </router-link>
             </div>
-            <img :src="file"  alt="">
+            <img :src="file.link"  alt="">
           </div>
         </div>
     </div>
@@ -22,8 +24,8 @@ export default {
   data () {
     return {
       links: [
-        'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/depositbonds/Deposit-bonds.jpeg',
-        'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/depositbonds/Ncte-Deposits.png'
+        { link: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/depositbonds/Deposit-bonds.jpeg', fileName: 'Deposit-Bonds'},
+        { link: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/depositbonds/Ncte-Deposits.png', fileName: 'NCTE-Deposits'}
       ],
       downloadLinks: [
         'https://www.googleapis.com/drive/v3/files/1ObyeDhMd_OIy4O5Fv7wTjgw-p7wbaKui?alt=media&key=AIzaSyBBlQv6sK0y25G-P1D8DxoehG60kp7jHiE',
