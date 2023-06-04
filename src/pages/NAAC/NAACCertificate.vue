@@ -57,4 +57,9 @@ img {
       height: auto;
     }
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
 </style>
