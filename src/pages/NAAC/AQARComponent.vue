@@ -2,19 +2,33 @@
   <div class="q-pa-lg">
     <div style="color:#303a57" class="fw-500 fs-30 font-roboto">AQAR</div>
     <div class="row align-center items-center justify-start q-mt-md q-gutter-md">
-      <a href="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/aqar/AQAR+2016.pdf" target="_blank">
-      <div class="col-2  column items-center ">
-        <img src="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/helper-images/PdfLogo.png" alt="">
-        <div class="fs-12 q-mt-md doc-title text-center">AQAR 2016-17</div>
+      <div v-for="(report, key) in reports" :key="key">
+        <router-link :to="{ name: 'files', params: { fileName: report.fileName },}" target="_blank">
+        <div class="col-2  column items-center ">
+          <img src="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/helper-images/PdfLogo.png" alt="">
+          <div class="fs-12 q-mt-md doc-title text-center">{{report.name}}</div>
+        </div>
+        </router-link>
       </div>
-      </a>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AQAR'
+  name: 'AQAR',
+  data () {
+    return {
+      reports: [
+        {link: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/aqar/AQAR+2016.pdf', name: 'AQAR 2016-17', fileName: 'AQAR-2016-17'},
+        {link: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/aqar/AQAR+2017-18+Report.pdf', name: 'AQAR 2017-18', fileName: 'AQAR-2017-18'},
+        {link: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/aqar/AQAR+2018-19.pdf', name: 'AQAR 2018-19', fileName: 'AQAR-2018-19'},
+        {link: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/aqar/AQAR+2019-20.pdf', name: 'AQAR 2019-20', fileName: 'AQAR-2019-20'},
+        {link: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/aqar/AQAR+2020-21.pdf', name: 'AQAR 2020-21', fileName: 'AQAR-2020-21'},
+        {link: 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/aqar/AQAR+2021-22.pdf', name: 'AQAR 2021-22', fileName: 'AQAR-2021-22'},
+      ]
+    }
+  }
 }
 </script>
 

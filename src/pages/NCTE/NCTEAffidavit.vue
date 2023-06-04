@@ -5,7 +5,9 @@
         <div class="ncte-affidavit">
           <div class="row justify-end q-mb-sm q-gutter-x-xs">
             <q-icon name="download" class="cursor-pointer" size="sm" @click="onDownload"></q-icon>
-            <q-icon name="open_in_new" class="cursor-pointer" size="sm"  @click="onShare"></q-icon>
+            <router-link :to="{ name: 'files', params: { fileName: 'NCTE-Affidavits' },} " target="_blank">
+              <q-icon name="open_in_new" class="cursor-pointer" size="sm" @click="onShare"></q-icon>
+            </router-link>
           </div>
           <img src="https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/affidavit/NCTE-Affidavit.png"  alt="">
         </div>
@@ -14,6 +16,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   name: 'AuditReports',
   data () {
@@ -22,8 +25,12 @@ export default {
     }
   },
   methods: {
+    ...mapMutations({
+      setFileLink: 'college/setFileLink'
+    }),
     onShare() {
-      window.open('https://drive.google.com/file/d/1EuMB5zNpIBV-8JvaSYNSXoGCTRM_l2eo/view', '_blank');
+      // this.setFileLink('https://drive.google.com/file/d/1EuMB5zNpIBV-8JvaSYNSXoGCTRM_l2eo/preview')
+      // this.$router.push({ name: 'files', params: { fileName: 'NCTE-Affidavits' },})
     },
     onDownload () {
       window.open('https://www.googleapis.com/drive/v3/files/1EuMB5zNpIBV-8JvaSYNSXoGCTRM_l2eo?alt=media&key=AIzaSyBBlQv6sK0y25G-P1D8DxoehG60kp7jHiE', '_blank')

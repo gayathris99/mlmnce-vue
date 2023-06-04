@@ -75,6 +75,12 @@ const routes = [
     component: () => import('layouts/GalleryLayout.vue'),
     name: 'gallery'
   },
+  {
+    path: '/files/:fileName',
+    name: 'files',
+    props: true,
+    component: () => import('layouts/FileLayout.vue')
+  },
 
   // Always leave this as last one,
   // but you can also remove it

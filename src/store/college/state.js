@@ -1,5 +1,6 @@
 export default function () {
   return {
-    notificationData: []
+    notificationData: [],
+    fileLink: ''
   }
 }

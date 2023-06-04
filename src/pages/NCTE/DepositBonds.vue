@@ -16,6 +16,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   name: 'AuditReports',
   data () {
@@ -36,9 +37,12 @@ export default {
       }
   },
   methods: {
+    ...mapMutations({
+      setFileLink: 'college/setFileLink'
+    }),
     onShare(index) {
-      // this.$router.go(this.links[index])
-      window.open(this.links[index], '_blank');
+      this.setFileLink(this.links[index])
+      this.$router.push({ name: 'files', params: { fileName: 'Deposit-Bonds' },})
     },
     onDownload (index) {
       window.open(this.downloadLinks[index], '_blank')
