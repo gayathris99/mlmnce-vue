@@ -58,6 +58,15 @@ export default {
         'Best-Practice-2019-20': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/bestpractices/Best+Practice+2019-20.pdf',
         'Best-Practice-2020-21': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/bestpractices/Best+Practice+2020-21.pdf',
         'Best-Practice-2021-22': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/bestpractices/Best+Practice+2021-22.pdf',
+
+        'SSS-2016-17': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/studentsurvey/SSS++2016-17.pdf',
+        'SSS-2017-18': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/studentsurvey/SSS++2017-18.pdf',
+        'SSS-2018-19': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/studentsurvey/SSS++2018-19.pdf',
+        'SSS-2019-20': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/studentsurvey/SSS+2019-20.pdf',
+        'SSS-2020-21': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/studentsurvey/SSS+2020-21.pdf',
+
+        'Self-Declaration': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/others/Self+Declaration.pdf',
+        'Undertaking': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/others/undertaking.pdf'
       },
     }
   },
