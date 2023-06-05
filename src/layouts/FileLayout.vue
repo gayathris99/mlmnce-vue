@@ -5,7 +5,9 @@
       <label for="">BACK</label>
     </q-btn> -->
     <div class="embed column align-center items-center ">
-      <iframe :src="fileLinks[$route.params.fileName]"  allow="autoplay"></iframe>
+      <iframe v-if="isDesktop" :src="`https://docs.google.com/viewer?url=${fileLinks[$route.params.fileName]}&embedded=true`" frameborder="0" width="800" height="1200"></iframe>
+      <iframe v-if="isTablet" :src="`https://docs.google.com/viewer?url=${fileLinks[$route.params.fileName]}&embedded=true`" frameborder="0" width="600" height="1200"></iframe>
+      <iframe v-if="isMobile" :src="`https://docs.google.com/viewer?url=${fileLinks[$route.params.fileName]}&embedded=true`" frameborder="0" width="300" height="1200"></iframe>
     </div>
 
   </div>
@@ -21,9 +23,9 @@ export default {
   data () {
     return {
       fileLinks: {
-        'NCTE-Affidavits': 'https://drive.google.com/file/d/1EuMB5zNpIBV-8JvaSYNSXoGCTRM_l2eo/preview',
+        'NCTE-Affidavits': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/affidavit/NCTE-Affidavit.pdf',
 
-        'NAAC-Certificate': 'https://drive.google.com/file/d/1zwcdRwsau9Bvc-3Fh6HwavhjS1f_c8oD/preview',
+        'NAAC-Certificate': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/naac/Certificate/NAAC+Certificate.pdf',
 
         'Academic-Plan-2016-17': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/naac/ACADEMIC+PLAN+2016-17.pdf',
         'Academic-Plan-2017-18': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/naac/ACADEMIC+PLAN+2017-18.pdf',
@@ -80,8 +82,8 @@ export default {
 
         'Mandatory-Disclosure': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/mandatorydisclosure/NCTE+Mandatory+Disclosure+formate.pdf',
 
-        'Students-List-2019-20': 'https://drive.google.com/file/d/1oJPJJOplUyMHViR0quvr4snpnDXg3Ia_/preview',
-        'Students-List-2020-21': 'https://drive.google.com/file/d/1XZ7pEDgNmwx1JoEKESchrmYRQ2dvLq9F/preview',
+        'Students-List-2019-20': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/academia/student-community/Students+List+2019-20.pdf',
+        'Students-List-2020-21': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/academia/student-community/Students+List+-+2020-21.pdf',
 
         'BEd-2022-23': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/syllabus/B.Ed.%2C+Syllabus+2022-23.pdf',
         '2nd-Year-BEd-2022-23': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/syllabus/2+Year+B.Ed+Syllabus+(Final+Print).pdf',
@@ -98,7 +100,16 @@ export default {
   computed: {
     ...mapGetters({
       getFileLink: 'college/getFileLink'
-    })
+    }),
+    isMobile () {
+      return this.$q.screen.lt.sm
+    },
+    isTablet () {
+      return this.$q.screen.gt.xs && this.$q.screen.lt.sm
+    },
+    isDesktop () {
+      return this.$q.screen.gt.sm
+    },
   },
   methods: {
     goBack() {
@@ -108,14 +119,3 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-.embed {
-  width: 100vw;
-  height: 100vh;
-
-  iframe {
-    width: 100%;
-    height: 100%;
-  }
-}
-</style>
