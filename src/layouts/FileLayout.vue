@@ -68,12 +68,12 @@ export default {
         'Self-Declaration': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/others/Self+Declaration.pdf',
         'Undertaking': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/others/undertaking.pdf',
 
-        'NCTE-Recognition': 'https://i.ibb.co/2WCdD8g/NCTE-Recognition.png',
-        'NCTE-AOS00330-B-Ed': 'https://i.ibb.co/Z11498Z/NCTE-AOS00330-B-Ed.jpg',
-        'New-NCTE-Recognition': 'https://i.ibb.co/3fZj038/New-NCTE-Recognition.jpg',
+        'NCTE-Recognition': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/recognition/NCTE+Recognition.pdf',
+        'NCTE-AOS00330-B-Ed': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/recognition/NCTE+-+AOS00330++B.Ed.pdf',
+        'New-NCTE-Recognition': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/recognition/APSO3474C.pdf',
 
-        'Deposit-Bonds': 'https://i.ibb.co/Wg8pRMp/Deposit-Bonds.jpg',
-        'NCTE-Deposits': 'https://i.ibb.co/QfwcwBT/Ncte-Deposits.png',
+        'Deposit-Bonds': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/depositbonds/Deposit-Bonds.pdf',
+        'NCTE-Deposits': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/depositbonds/Ncte-Deposits.pdf',
 
         'Audit-Report-2019-20': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/auditreports/Audit+Report+2019-20.pdf',
         'Audit-Report-2020-21': 'https://portfolio-platform.s3.ap-south-1.amazonaws.com/media/public/mlmncecollege/pdf/ncte/auditreports/Audit+report+2020-21.pdf',

@@ -34,7 +34,7 @@
       </a>
     </div>
   </div>
-  <div class="marquee-content font-roboto fs-15" v-if="notificationData?.length">
+  <div class="marquee-content font-roboto fs-15" v-if="notificationData.length">
     <marquee behavior="smooth" direction="" bgcolor="#ffcdd2" class="q-pa-sm" onmouseover="this.stop()" onmouseout="this.start()">
       <div class="row no-wrap">
         &nbsp;
@@ -46,6 +46,7 @@
       </div>
     </marquee>
   </div>
+  <div class="bordered-class-top" v-if="!isMobile"></div>
   <div class="row items-center align-center justify-evenly fw-600 menu no-wrap header-component font-roboto q-pb-sm" v-if="!isMobile">
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'home'})" :class="this.$route.name === 'home' ? 'bordered-class' : ''">HOME</div>
     <div class="cursor-pointer nav-item" @click="this.$router.push({name: 'about'})" :class="this.$route.fullPath.includes('about') ? 'bordered-class' : ''">ABOUT US</div>
@@ -238,6 +239,9 @@ a {
 }
 .bordered-class {
   border-top: 3px solid #cf050d;
+}
+.bordered-class-top {
+  border-top: 0.5px solid #b6c8d8;
 }
 :deep(.q-item) {
   padding: 0px !important;
