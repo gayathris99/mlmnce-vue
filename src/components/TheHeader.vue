@@ -39,9 +39,9 @@
       <div class="row no-wrap">
         &nbsp;
       <div v-for="(notification, i) in notificationData" :key="i">
-        <div v-if="notification.notificationEntity === 'PLAIN_ALERT'">&nbsp;{{notification.content}}&nbsp;</div>
-        <div v-if="notification.notificationEntity === 'OPEN_LINK'">&nbsp;{{notification.content}} - <a :href="notification.link" target="_blank">Know More</a>&nbsp;</div>
-        <div v-if="notification.notificationEntity === 'ATTACHMENT_DOWNLOAD'">&nbsp;{{notification.content}} - <a :href="notification.documentViewLink" target="_blank">Click here to download</a>&nbsp;</div>
+        <div v-if="notification.notificationEntity === 'PLAIN_ALERT'">&nbsp;{{notification.content}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div v-if="notification.notificationEntity === 'OPEN_LINK'">&nbsp;{{notification.content}} - <a :href="notification.link" target="_blank">Know More</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+        <div v-if="notification.notificationEntity === 'ATTACHMENT_DOWNLOAD'">&nbsp;{{notification.content}} - <a :href="notification.documentViewLink" target="_blank">Click here to download</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
       </div>
       </div>
     </marquee>
@@ -146,6 +146,35 @@
     </div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16"  @click="this.$router.push({name: 'downloads'})">DOWNLOADS</div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16" @click="this.$router.push({name: 'gallery'})">GALLERY</div>
+    <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">
+    <q-expansion-item
+      label="IMPORTANT LINKS"
+      header-class="text-red"
+      class="important-links"
+      group="somegroup"
+      dense
+      >
+        <div class="q-my-sm">
+          <a href="https://ncte.gov.in/Website/index.aspx/" class="q-my-sm fs-13" target="__blank">NCTE</a>
+        </div>
+        <div class="q-my-sm">
+         <a href="http://www.naac.gov.in/index.php/en/" class="q-my-sm fs-13" target="__blank">NAAC</a>
+        </div>
+        <div class="q-my-sm">
+          <a href="https://www.dsert.kar.nic.in/" class="q-my-sm fs-13" target="__blank">DSERT</a>
+        </div>
+        <div class="q-my-sm">
+         <a href="https://dce.karnataka.gov.in/english" class="q-my-sm fs-13" target="__blank">Collegiate Education</a>
+        </div>
+        <div class="q-my-sm">
+          <a href="http://www.kuvempu.ac.in/kan/index.php" class="q-my-sm fs-13" target="__blank">Kuvempu University</a>
+        </div>
+        <div class="q-my-sm">
+          <a href="https://www.schooleducation.kar.nic.in/index.html" class="q-my-sm fs-13" target="__blank">Dept. of Public Instructions</a>
+        </div>
+
+      </q-expansion-item>
+    </div>
     <div class="q-pt-lg">
       <a href="mailto:prinicipalmesmlmnce@gmail.com" class="row q-gutter-xs q-pb-sm items-center">
         <q-icon name="email"/>
@@ -205,7 +234,7 @@ export default {
       })
     },
     async getNotifications () {
-      const { data } = await axios.get('https://104c-49-207-219-140.ngrok-free.app/collegewebsite/notifications')
+      const { data } = await axios.get('https://platform.foxgloveteam.com/collegewebsite/notifications')
       this.notificationData = data
       this.setNotificationData(data)
     },
@@ -259,5 +288,11 @@ marquee {
 }
 .header-component {
   color: #47536e;
+}
+
+.important-links {
+  a {
+    color: #151F7C;
+  }
 }
 </style>

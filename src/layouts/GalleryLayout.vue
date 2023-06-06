@@ -74,12 +74,11 @@ export default {
   },
   methods: {
     async getGalleryDetails () {
-      const { data } = await axios.get('https://104c-49-207-219-140.ngrok-free.app/collegewebsite/gallary-details')
+      const { data } = await axios.get('https://platform.foxgloveteam.com/collegewebsite/gallary-details')
       this.galleryData = data
     },
     async onShowCarousel (gallery) {
-      // https://104c-49-207-219-140.ngrok-free.app/collegewebsite/gallary-details
-      const { data } = await axios.get(`https://104c-49-207-219-140.ngrok-free.app/collegewebsite/gallary-details/${gallery.album}`)
+      const { data } = await axios.get(`https://platform.foxgloveteam.com/collegewebsite/gallary-details/${gallery.album}`)
       this.carouselData = data
       this.showCarousel = true
     }
