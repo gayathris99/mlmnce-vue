@@ -29,6 +29,7 @@
             </div>
           </div>
         </div>
+       <q-separator vertical color="#b6c8d8" v-if="!isMobile" class=" q-my-md"/>
         <q-scroll-area class="col-md-10 col-sm-9 col-xs-12" style="height: 100vh" v-if="!isMobile">
           <router-view />
         </q-scroll-area>
