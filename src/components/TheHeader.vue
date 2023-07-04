@@ -131,6 +131,7 @@
         <div class="q-py-sm cursor-pointer fs-13" @click="this.$router.push({name: 'deposit-bonds'})">Deposit Bonds</div>
         <div class="q-py-sm cursor-pointer fs-13" @click="this.$router.push({name: 'audit-reports'})">Audit Reports</div>
         <div class="q-py-sm cursor-pointer fs-13" @click="this.$router.push({name: 'mandatory-disclosure'})">Mandatory Disclosure</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="this.$router.push({name: 'code-of-professional-ethics'})">Code Of Professional Ethics</div>
       </q-expansion-item>
     </div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">

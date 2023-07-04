@@ -13,6 +13,7 @@
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'deposit-bonds' ? 'text-highlight': ''" @click="this.$router.push({name: 'deposit-bonds'})">Deposit Bonds</div>
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'audit-reports' ? 'text-highlight': ''" @click="this.$router.push({name: 'audit-reports'})">Audit Reports</div>
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'mandatory-disclosure' ? 'text-highlight': ''" @click="this.$router.push({name: 'mandatory-disclosure'})">Mandatory Disclosure</div>
+            <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'code-of-professional-ethics' ? 'text-highlight': ''" @click="this.$router.push({name: 'code-of-professional-ethics'})">Code of Professional Ethics</div>
           </div>
           <div class="important-links">
             <div style="color:#ff0302" class="q-mb-sm fs-20">IMPORTANT LINKS</div>

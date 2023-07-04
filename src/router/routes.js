@@ -55,6 +55,7 @@ const routes = [
       { path: 'mandatory-disclosure', component: () => import('src/pages/NCTE/MandatoryDisclosure.vue'), name: 'mandatory-disclosure' },
       { path: 'audit-reports', component: () => import('src/pages/NCTE/AuditReports.vue'), name: 'audit-reports' },
       { path: 'deposit-bonds', component: () => import('src/pages/NCTE/DepositBonds.vue'), name: 'deposit-bonds' },
+      { path: 'code-of-professional-ethics', component: () => import('src/pages/NCTE/CodeOfProfessionalEthics.vue'), name: 'code-of-professional-ethics' },
     ]
   },
   {
