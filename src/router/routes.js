@@ -16,6 +16,7 @@ const routes = [
       { path: 'toppers', component: () => import('src/pages/AboutUs/AboutToppers.vue'), name: 'toppers' },
       { path: 'infra', component: () => import('src/pages/AboutUs/AboutInfra.vue'), name: 'infra' },
       { path: 'staff', component: () => import('src/pages/AboutUs/AboutStaff.vue'), name: 'staff' },
+      { path: 'organogram', component: () => import('src/pages/AboutUs/AboutOrganogram.vue'), name: 'organogram' },
 
     ]
   },

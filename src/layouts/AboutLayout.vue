@@ -14,6 +14,7 @@
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'staff' ? 'text-highlight': ''" @click="this.$router.push({name: 'staff'})">Staff</div>
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'toppers' ? 'text-highlight': ''" @click="this.$router.push({name: 'toppers'})">Toppers</div>
             <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'infra' ? 'text-highlight': ''" @click="this.$router.push({name: 'infra'})">Infrastructure</div>
+            <div class="fs-14 fw-500 cursor-pointer" :class="getRouteName === 'organogram' ? 'text-highlight': ''" @click="this.$router.push({name: 'organogram'})">Organogram</div>
           </div>
           <div class="important-links">
             <div style="color:#ff0302" class="q-mb-sm fs-20">IMPORTANT LINKS</div>

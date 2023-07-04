@@ -85,6 +85,7 @@
         <div class="q-py-sm cursor-pointer fs-13" @click="goTo('staff')">Staff</div>
         <div class="q-py-sm cursor-pointer fs-13" @click="goTo('toppers')">Toppers</div>
         <div class="q-py-sm cursor-pointer fs-13" @click="goTo('infra')">Infrastructure</div>
+        <div class="q-py-sm cursor-pointer fs-13" @click="goTo('organogram')">Organogram</div>
       </q-expansion-item>
     </div>
     <div class="cursor-pointer q-my-sm fw-500 q-pl-sm fs-16">
